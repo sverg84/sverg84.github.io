@@ -21,17 +21,15 @@ var __importStar = (this && this.__importStar) || function (mod) {
     __setModuleDefault(result, mod);
     return result;
 };
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 const React = __importStar(require("react"));
-const ResumeButton_1 = __importDefault(require("./ResumeButton"));
-require("./font.css");
-function App() {
-    return (React.createElement("div", null,
-        React.createElement("h1", null, "sverg84"),
-        React.createElement("h2", null, "Heylo there"),
-        React.createElement(ResumeButton_1.default, null)));
+const styles = {
+    columnGap: 8,
+    display: 'flex',
+};
+function ResumeButton() {
+    return (React.createElement("button", { style: styles },
+        React.createElement("a", { href: '/sverg_resume.pdf', target: '_blank' }, "Download Resume"),
+        React.createElement("i", { className: "fa-solid fa-download" })));
 }
-exports.default = App;
+exports.default = ResumeButton;
