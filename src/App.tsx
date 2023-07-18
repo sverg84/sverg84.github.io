@@ -1,8 +1,6 @@
 import * as React from 'react';
 import ResumeButton from './ResumeButton';
 
-import './font.css';
-
 export default function App(): React.JSX.Element {
     return (
         <div>
