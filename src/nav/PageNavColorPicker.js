@@ -1,7 +1,9 @@
 import * as React from "react";
 import NavDropdown from "react-bootstrap/esm/NavDropdown";
+
 import { PAGE_COLORS } from "../types/PageColor";
 import ColorIcon from "./ColorIcon";
+
 const style = {
     alignItems: 'center',
     columnGap: 8,

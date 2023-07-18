@@ -1,6 +1,8 @@
 import * as React from "react";
 import Button from "react-bootstrap/Button";
+
 import PageColorContext from "./contexts/PageColorContext";
+
 const button = {
     alignItems: "center",
     columnGap: 8,

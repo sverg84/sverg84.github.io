@@ -1,12 +1,14 @@
 import * as React from "react";
 import Container from "react-bootstrap/Container";
-import MyName from "../consts/MyName";
-import Navbar from "react-bootstrap/Navbar";
-import PageColorContext from "../contexts/PageColorContext";
 import NavDropdown from "react-bootstrap/esm/NavDropdown";
-import PageNavColorPicker from "./PageNavColorPicker";
+import Navbar from "react-bootstrap/Navbar";
+
+import MyName from "../consts/MyName";
+import PageColorContext from "../contexts/PageColorContext";
 import SetPageColorContext from "../contexts/SetPageColorContext";
 import { isPageColor } from "../types/PageColor";
+import PageNavColorPicker from "./PageNavColorPicker";
+
 export default function PageNavBar() {
     const color = React.useContext(PageColorContext);
     const setColor = React.useContext(SetPageColorContext);
