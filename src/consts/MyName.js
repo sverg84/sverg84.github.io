@@ -1,2 +1,2 @@
-const MyName = 'Stephen Vergara';
+const MyName = "Stephen Vergara";
 export default MyName;

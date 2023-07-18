@@ -1,14 +1,14 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import * as React from 'react';
+import "bootstrap/dist/css/bootstrap.min.css";
+import * as React from "react";
 
-import App from './App';
-import { BrowserRouter } from 'react-router-dom';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";
+import App from "./App";
 
-const rootElement: HTMLElement | null = document.getElementById('root');
+const rootElement: HTMLElement | null = document.getElementById("root");
 
 if (rootElement == null) {
-    throw new Error('Failed to find root element');
+  throw new Error("Failed to find root element");
 }
 
 const root: ReactDOM.Root = ReactDOM.createRoot(rootElement);
