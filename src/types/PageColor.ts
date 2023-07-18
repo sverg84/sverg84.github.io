@@ -1,0 +1,1 @@
+export type PageColor = 'black' | '#ffc2e2' | '#0504aa';
