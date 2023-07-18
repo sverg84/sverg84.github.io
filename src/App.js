@@ -5,7 +5,6 @@ import PageColorContext from "./contexts/PageColorContext";
 import SetPageColorContext from "./contexts/SetPageColorContext";
 import PageNavBar from "./nav/PageNavBar";
 import ResumeButton from "./ResumeButton";
-
 export default function App() {
     const [color, setColor] = useState("black");
     return (React.createElement(PageColorContext.Provider, { value: color },

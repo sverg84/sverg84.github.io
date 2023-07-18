@@ -1,5 +1,4 @@
 import * as React from "react";
-
 const style = {
     borderRadius: 8,
     height: 24,
