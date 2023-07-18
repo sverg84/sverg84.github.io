@@ -1,2 +1,2 @@
 import { createContext } from "react";
-export default createContext(undefined);
+export default createContext(() => { });

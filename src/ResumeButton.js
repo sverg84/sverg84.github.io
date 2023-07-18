@@ -1,22 +1,22 @@
 import * as React from 'react';
+import Button from 'react-bootstrap/Button';
 import PageColorContext from './contexts/PageColorContext';
-import { Link } from 'react-router-dom';
-const anchor = {
-    display: 'block',
-    textDecoration: 'none',
-    width: 'max-content'
-};
 const button = {
-    backgroundColor: 'transparent',
-    borderRadius: 8,
+    alignItems: 'center',
     columnGap: 8,
     cursor: 'pointer',
-    display: 'flex',
+    display: 'inline-flex',
+    textDecoration: 'none'
 };
 export default function ResumeButton() {
     const color = React.useContext(PageColorContext);
-    return (React.createElement(Link, { to: '/sverg_resume.pdf', style: { color: color ?? undefined, ...anchor }, target: '_blank' },
-        React.createElement("button", { style: { boxShadow: `2px 2px ${color}`, ...button } },
-            React.createElement("span", null, "Download Resume"),
-            React.createElement("i", { className: "fa-solid fa-download" }))));
+    const buttonStyle = {
+        borderColor: color,
+        boxShadow: `4px 4px ${color}`,
+        color,
+        ...button
+    };
+    return (React.createElement(Button, { href: '/sverg_resume.pdf', style: buttonStyle, target: '_blank', variant: 'outline-light' },
+        React.createElement("span", null, "Download Resume"),
+        React.createElement("i", { className: "fa-solid fa-download" })));
 }

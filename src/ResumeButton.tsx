@@ -1,30 +1,30 @@
 import * as React from 'react';
-import PageColorContext from './contexts/PageColorContext';
-import { Link } from 'react-router-dom';
 
-const anchor: React.CSSProperties = {
-    display: 'block',
-    textDecoration: 'none',
-    width: 'max-content'
-};
+import Button from 'react-bootstrap/Button';
+import PageColorContext from './contexts/PageColorContext';
 
 const button: React.CSSProperties = {
-    backgroundColor: 'transparent',
-    borderRadius: 8,
+    alignItems: 'center',
     columnGap: 8,
     cursor: 'pointer',
-    display: 'flex',
+    display: 'inline-flex',
+    textDecoration: 'none'
 };
 
 export default function ResumeButton(): React.JSX.Element {
     const color = React.useContext(PageColorContext);
 
+    const buttonStyle: React.CSSProperties = {
+        borderColor: color,
+        boxShadow: `4px 4px ${color}`,
+        color,
+        ...button
+    };
+
     return (
-        <Link to='/sverg_resume.pdf' style={{color: color ?? undefined, ...anchor}} target='_blank'>
-            <button style={{boxShadow: `2px 2px ${color}`, ...button}}>
-                <span>Download Resume</span>
-                <i className="fa-solid fa-download" />
-            </button>
-        </Link>
+        <Button href='/sverg_resume.pdf' style={buttonStyle} target='_blank' variant='outline-light'>
+            <span>Download Resume</span>
+            <i className="fa-solid fa-download" />
+        </Button>
     );
 }
