@@ -8,7 +8,6 @@ import PageColorContext from '../contexts/PageColorContext';
 import SetPageColorContext from '../contexts/SetPageColorContext';
 import { isPageColor } from '../types/PageColor';
 
-
 const PageNavColorPicker = React.lazy(() => import('./PageNavColorPicker.tsx') );
 
 export default function PageNavBar(): React.JSX.Element {
