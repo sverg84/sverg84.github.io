@@ -1,11 +1,11 @@
 import * as React from "react";
 import { useState } from "react";
 
-import PageColorContext from "./contexts/PageColorContext";
-import SetPageColorContext from "./contexts/SetPageColorContext";
+import PageColorContext from "../contexts/PageColorContext";
+import SetPageColorContext from "../contexts/SetPageColorContext";
+import { PAGE_COLORS, type PageColorName } from "../types/PageColor";
+import ResumeButton from "./buttons/ResumeButton";
 import PageNavBar from "./nav/PageNavBar";
-import ResumeButton from "./ResumeButton";
-import { PAGE_COLORS, type PageColorName } from "./types/PageColor";
 
 export default function App(): React.JSX.Element {
   const [color, setColor] = useState<PageColorName>('Obsidian');

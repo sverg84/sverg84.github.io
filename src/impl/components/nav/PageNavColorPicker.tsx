@@ -1,7 +1,7 @@
 import * as React from "react";
 import NavDropdown from "react-bootstrap/esm/NavDropdown";
 
-import { PAGE_COLORS, PageColorHex } from "../types/PageColor";
+import { PAGE_COLORS, PageColorHex } from "../../types/PageColor";
 import ColorIcon from "./ColorIcon";
 
 const header: React.CSSProperties = {

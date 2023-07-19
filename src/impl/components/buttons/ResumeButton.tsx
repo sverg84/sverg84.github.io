@@ -1,7 +1,7 @@
 import * as React from "react";
 import Button from "react-bootstrap/Button";
 
-import PageColorContext from "./contexts/PageColorContext";
+import PageColorContext from "../../contexts/PageColorContext";
 
 const button: React.CSSProperties = {
   alignItems: "center",

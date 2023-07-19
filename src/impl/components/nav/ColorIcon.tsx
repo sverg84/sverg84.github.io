@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import { PageColorHex } from "../types/PageColor";
+import { PageColorHex } from "../../types/PageColor";
 
 const style: React.CSSProperties = {
   borderRadius: 8,

@@ -4,10 +4,10 @@ import Container from 'react-bootstrap/Container';
 import NavDropdown from 'react-bootstrap/esm/NavDropdown';
 import Navbar from 'react-bootstrap/Navbar';
 
-import MyName from '../consts/MyName';
-import PageColorContext from '../contexts/PageColorContext';
-import SetPageColorContext from '../contexts/SetPageColorContext';
-import { isPageColor } from '../types/PageColor';
+import MyName from '../../consts/MyName.ts';
+import PageColorContext from '../../contexts/PageColorContext.ts';
+import SetPageColorContext from '../../contexts/SetPageColorContext.ts';
+import { isPageColor } from '../../types/PageColor.ts';
 
 const PageNavColorPicker = React.lazy(() => import('./PageNavColorPicker.tsx'));
 
