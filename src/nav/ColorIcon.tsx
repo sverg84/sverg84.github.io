@@ -1,5 +1,6 @@
 import * as React from "react";
-import { PageColor } from "../types/PageColor";
+
+import { PageColorHex } from "../types/PageColor";
 
 const style: React.CSSProperties = {
   borderRadius: 8,
@@ -8,7 +9,7 @@ const style: React.CSSProperties = {
 };
 
 type Props = Readonly<{
-  color: PageColor;
+  color: PageColorHex;
 }>;
 
 export default function ColorIcon({ color }: Props): React.JSX.Element {

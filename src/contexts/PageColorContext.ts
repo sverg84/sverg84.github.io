@@ -1,4 +1,5 @@
 import { createContext } from "react";
-import { PageColor } from "../types/PageColor";
 
-export default createContext<PageColor>("black");
+import type { PageColorHex } from "../types/PageColor";
+
+export default createContext<PageColorHex>("#2e3134");

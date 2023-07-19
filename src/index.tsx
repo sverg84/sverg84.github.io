@@ -1,8 +1,9 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import * as React from "react";
 
+import * as React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
+
 import App from "./App";
 
 const rootElement: HTMLElement | null = document.getElementById("root");

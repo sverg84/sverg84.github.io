@@ -1,13 +1,15 @@
 import * as React from 'react';
-
 import Container from 'react-bootstrap/Container';
-import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/esm/NavDropdown';
+import Navbar from 'react-bootstrap/Navbar';
+
 import MyName from '../consts/MyName';
 import PageColorContext from '../contexts/PageColorContext';
 import SetPageColorContext from '../contexts/SetPageColorContext';
 import { isPageColor } from '../types/PageColor';
-import PageNavColorPicker from './PageNavColorPicker';
+
+
+const PageNavColorPicker = React.lazy(() => import('./PageNavColorPicker.tsx') );
 
 export default function PageNavBar(): React.JSX.Element {
 	const color = React.useContext(PageColorContext);
@@ -27,7 +29,7 @@ export default function PageNavBar(): React.JSX.Element {
 			expand={false}
 			sticky="top"
 			style={{backgroundColor: color}}
-			variant={'dark'}>
+			variant="dark">
 			<Container>
 				<Navbar.Brand>{MyName}</Navbar.Brand>
 				<NavDropdown
@@ -36,7 +38,9 @@ export default function PageNavBar(): React.JSX.Element {
 					style={{color: 'white'}}
 					title={<i className="fa-solid fa-palette" />}
 					onSelect={onSelect}>
-					<PageNavColorPicker />
+					<React.Suspense fallback={null}>
+						<PageNavColorPicker />
+					</React.Suspense>
 				</NavDropdown>
 			</Container>
 		</Navbar>
