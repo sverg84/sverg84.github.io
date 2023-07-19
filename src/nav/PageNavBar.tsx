@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Spinner } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
 import NavDropdown from 'react-bootstrap/esm/NavDropdown';
 import Navbar from 'react-bootstrap/Navbar';
@@ -8,7 +9,18 @@ import PageColorContext from '../contexts/PageColorContext';
 import SetPageColorContext from '../contexts/SetPageColorContext';
 import { isPageColor } from '../types/PageColor';
 
-const PageNavColorPicker = React.lazy(() => import('./PageNavColorPicker.tsx') );
+const PageNavColorPicker = React.lazy(() => import('./PageNavColorPicker.tsx'));
+
+const DROPDOWN_WIDTH: number = 177;
+const DROPDOWN_HEIGHT: number = 262;
+
+const fallback: React.CSSProperties = {
+	display: 'flex',
+	alignItems: 'center',
+	justifyContent: 'center',
+	height: DROPDOWN_HEIGHT,
+	width: DROPDOWN_WIDTH,
+} as const;
 
 export default function PageNavBar(): React.JSX.Element {
 	const color = React.useContext(PageColorContext);
@@ -37,7 +49,15 @@ export default function PageNavBar(): React.JSX.Element {
 					style={{color: 'white'}}
 					title={<i className="fa-solid fa-palette" />}
 					onSelect={onSelect}>
-					<React.Suspense fallback={null}>
+					<React.Suspense
+						fallback={
+							<div style={fallback}>
+								<Spinner
+									animation="border"
+									variant="primary"
+								/>
+							</div>
+						}>
 						<PageNavColorPicker />
 					</React.Suspense>
 				</NavDropdown>

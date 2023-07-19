@@ -9,7 +9,7 @@ const button: React.CSSProperties = {
   cursor: "pointer",
   display: "inline-flex",
   textDecoration: "none",
-};
+} as const;
 
 export default function ResumeButton(): React.JSX.Element {
   const color = React.useContext(PageColorContext);
@@ -19,7 +19,7 @@ export default function ResumeButton(): React.JSX.Element {
     boxShadow: `4px 4px ${color}`,
     color,
     ...button,
-  };
+  } as const;
 
   return (
     <Button

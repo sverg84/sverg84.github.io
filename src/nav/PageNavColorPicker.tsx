@@ -10,13 +10,13 @@ const header: React.CSSProperties = {
     fontStyle: 'italic',
     fontWeight: 'bold',
     textAlign: 'center',
-};
+} as const;
 
 const dropdown: React.CSSProperties = {
     alignItems: 'center',
     columnGap: 8,
     display: "inline-flex"
-};
+} as const;
 
 export default function PageNavColorPicker(): React.JSX.Element {
   return (
