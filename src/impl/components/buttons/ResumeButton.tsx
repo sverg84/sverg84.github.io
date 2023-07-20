@@ -31,7 +31,7 @@ export default function ResumeButton(): React.JSX.Element {
       target="_blank"
       variant="outline-light"
     >
-      <text>Download Resume</text>
+      <span>Download Resume</span>
       <FontAwesomeIcon icon={solid("download")} />
     </Button>
   );
