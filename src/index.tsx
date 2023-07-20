@@ -4,7 +4,7 @@ import * as React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 
-import App from "./components/App";
+import App from "./impl/components/App";
 
 const rootElement: HTMLElement | null = document.getElementById("root");
 

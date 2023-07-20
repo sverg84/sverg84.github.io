@@ -1,3 +1,5 @@
+import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import * as React from "react";
 import Button from "react-bootstrap/Button";
 
@@ -8,6 +10,7 @@ const button: React.CSSProperties = {
   columnGap: 8,
   cursor: "pointer",
   display: "inline-flex",
+  fontWeight: "bold",
   textDecoration: "none",
 } as const;
 
@@ -28,8 +31,8 @@ export default function ResumeButton(): React.JSX.Element {
       target="_blank"
       variant="outline-light"
     >
-      <span>Download Resume</span>
-      <i className="fa-solid fa-download" />
+      <text>Download Resume</text>
+      <FontAwesomeIcon icon={solid("download")} />
     </Button>
   );
 }

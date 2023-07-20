@@ -1,37 +1,62 @@
-import * as React from "react";
-import NavDropdown from "react-bootstrap/esm/NavDropdown";
+import { solid } from '@fortawesome/fontawesome-svg-core/import.macro';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import * as React from 'react';
+import { Spinner } from 'react-bootstrap';
+import NavDropdown from 'react-bootstrap/esm/NavDropdown';
 
-import { PAGE_COLORS, PageColorHex } from "../../types/PageColor";
-import ColorIcon from "./ColorIcon";
+import SetPageColorContext from '../../contexts/SetPageColorContext.ts';
+import { isPageColor } from '../../types/PageColor';
 
-const header: React.CSSProperties = {
-    color: "black",
-    fontSize: 16,
-    fontStyle: 'italic',
-    fontWeight: 'bold',
-    textAlign: 'center',
-} as const;
+const PageNavColorPickerMenu = React.lazy(() =>
+	import('./PageNavColorPickerMenu.tsx'),
+);
 
-const dropdown: React.CSSProperties = {
-    alignItems: 'center',
-    columnGap: 8,
-    display: "inline-flex"
+const DROPDOWN_WIDTH: number = 177;
+const DROPDOWN_HEIGHT: number = 262;
+
+const fallback: React.CSSProperties = {
+	display: 'flex',
+	alignItems: 'center',
+	justifyContent: 'center',
+	height: DROPDOWN_HEIGHT,
+	width: DROPDOWN_WIDTH,
 } as const;
 
 export default function PageNavColorPicker(): React.JSX.Element {
-  return (
-    <>
-      <NavDropdown.Header style={header}>
-        Color Picker
-      </NavDropdown.Header>
-      {Object.entries(PAGE_COLORS).map(([colorLabel, colorCode]) => {
-        return (
-          <NavDropdown.Item eventKey={colorLabel} key={colorCode} style={dropdown}>
-            <ColorIcon color={colorCode as PageColorHex} />
-            {colorLabel}
-          </NavDropdown.Item>
-        );
-      })}
-    </>
-  );
+	const setColor = React.useContext(SetPageColorContext);
+
+	const onSelect = React.useCallback(
+		(eventKey: string | null) => {
+			if (isPageColor(eventKey)) {
+				setColor(eventKey);
+			}
+		},
+		[setColor],
+	);
+
+	return (
+		<NavDropdown
+			align="end"
+			renderMenuOnMount={false}
+			style={{color: 'white'}}
+			title={
+				<FontAwesomeIcon
+					icon={solid('palette')}
+					bounce
+				/>
+			}
+			onSelect={onSelect}>
+			<React.Suspense
+				fallback={
+					<div style={fallback}>
+						<Spinner
+							animation="border"
+							variant="primary"
+						/>
+					</div>
+				}>
+				<PageNavColorPickerMenu />
+			</React.Suspense>
+		</NavDropdown>
+	);
 }
