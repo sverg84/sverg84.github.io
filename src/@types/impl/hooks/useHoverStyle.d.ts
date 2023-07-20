@@ -1,6 +1,7 @@
 import { DataType } from 'csstype';
 import * as React from 'react';
 type ReturnType = Readonly<{
+    isHovering: boolean;
     style: React.CSSProperties | undefined;
     onMouseEnter: () => void;
     onMouseLeave: () => void;

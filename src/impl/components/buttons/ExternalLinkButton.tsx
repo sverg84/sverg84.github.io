@@ -17,7 +17,11 @@ export default function GitHubButton({
 	href,
 	icon,
 }: Props): React.JSX.Element {
-	const {style: hoverStyle, ...mouseEvents} = useHoverStyle(color);
+	const {
+		isHovering: _isHovering,
+		style: hoverStyle,
+		...mouseEvents
+	} = useHoverStyle(color);
 
 	const style: React.CSSProperties | undefined =
 		color != null
