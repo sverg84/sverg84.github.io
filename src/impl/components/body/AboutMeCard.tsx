@@ -1,5 +1,8 @@
 import * as React from 'react';
-import { Card, Col, Container, Row } from 'react-bootstrap';
+import Card from 'react-bootstrap/Card';
+import Col from 'react-bootstrap/Col';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
 
 import MyName from '../../consts/MyName';
 import GitHubButton from '../buttons/GitHubButton';

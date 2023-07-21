@@ -1,10 +1,10 @@
 import { solid } from '@fortawesome/fontawesome-svg-core/import.macro';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import * as React from 'react';
-import { Spinner } from 'react-bootstrap';
 import NavDropdown from 'react-bootstrap/esm/NavDropdown';
+import Spinner from 'react-bootstrap/Spinner';
 
-import SetPageColorContext from '../../contexts/SetPageColorContext.ts';
+import SetPageColorContext from '../../contexts/SetPageColorContext';
 import { isPageColor } from '../../types/PageColor';
 
 const PageNavColorPickerMenu = React.lazy(() =>
