@@ -5,11 +5,7 @@ import Moment from 'react-moment';
 import MyName from '../../../consts/MyName';
 import PageColorContext from '../../../contexts/PageColorContext';
 
-const BIRTHDATE: string = "05/06/1998";
-
-const heading: React.CSSProperties = {
-	fontSize: 32,
-} as const;
+const BIRTHDATE: string = '05/06/1998';
 
 export default function AboutMeText(): React.JSX.Element {
 	const color = React.useContext(PageColorContext);
@@ -22,7 +18,7 @@ export default function AboutMeText(): React.JSX.Element {
 
 	return (
 		<>
-            <Card.Text style={heading}>About Me</Card.Text>
+			<h2 style={{color}}>About Me</h2>
 			<Card.Text>
 				Heylo, my name is <span style={pageColorStyle}>{MyName}</span>.
                 I am {<Moment date={BIRTHDATE} durationFromNow={true} format="yy" />} years old.
