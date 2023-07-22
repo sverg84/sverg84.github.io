@@ -42,7 +42,7 @@ export default function PageNavColorPicker(): React.JSX.Element {
 			title={
 				<FontAwesomeIcon
 					icon={solid('palette')}
-					bounce
+					bounce={true}
 				/>
 			}
 			onSelect={onSelect}>

@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import PageMarginStyle from '../../consts/PageMarginStyle';
-import AboutMeCard from './AboutMeCard';
+import AboutMeCard from './about/AboutMeCard';
 
 export default function PageBody(): React.JSX.Element {
 	return (

@@ -2,8 +2,8 @@ import * as React from 'react';
 import Card from 'react-bootstrap/esm/Card';
 import Moment from 'react-moment';
 
-import MyName from '../../consts/MyName';
-import PageColorContext from '../../contexts/PageColorContext';
+import MyName from '../../../consts/MyName';
+import PageColorContext from '../../../contexts/PageColorContext';
 
 const BIRTHDATE: string = "05/06/1998";
 
