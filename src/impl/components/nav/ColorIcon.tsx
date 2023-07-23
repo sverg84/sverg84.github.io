@@ -1,17 +1,17 @@
-import * as React from "react";
+import * as React from 'react';
 
-import { PageColorHex } from "../../types/PageColor";
-
-const style: React.CSSProperties = {
-  borderRadius: 8,
-  height: 24,
-  width: 24,
-} as const;
+import iconStyles from '../../styles/nav/colorIcon.module.css';
+import { PageColorHex } from '../../types/PageColor';
 
 type Props = Readonly<{
-  color: PageColorHex;
+	color: PageColorHex;
 }>;
 
-export default function ColorIcon({ color }: Props): React.JSX.Element {
-  return <div style={{ ...style, backgroundColor: color }} />;
+export default function ColorIcon({color}: Props): React.JSX.Element {
+	return (
+		<div
+			className={iconStyles.icon}
+			style={{backgroundColor: color}}
+		/>
+	);
 }

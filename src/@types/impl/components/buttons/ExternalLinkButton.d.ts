@@ -6,5 +6,5 @@ type Props = Readonly<{
     href: string;
     icon: IconProp;
 }>;
-export default function GitHubButton({ color, href, icon, }: Props): React.JSX.Element;
+export default function ExternalLinkButton({ color, href, icon, }: Props): React.JSX.Element;
 export {};

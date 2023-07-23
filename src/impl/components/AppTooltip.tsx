@@ -2,9 +2,7 @@ import * as React from 'react';
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import Tooltip from 'react-bootstrap/Tooltip';
 
-const contentStyle: React.CSSProperties = {
-	textDecoration: 'underline dotted',
-} as const;
+import contentStyle from '../styles/tooltip.module.css';
 
 type Props = Readonly<{
 	content: string;
@@ -19,7 +17,7 @@ export default function AppTooltip({
 		<OverlayTrigger
 			placement="top"
 			overlay={<Tooltip>{tooltip}</Tooltip>}>
-			<span style={contentStyle}>{content}</span>
+			<span className={contentStyle.tooltip}>{content}</span>
 		</OverlayTrigger>
 	);
 }

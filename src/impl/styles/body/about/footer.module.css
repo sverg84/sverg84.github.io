@@ -1,0 +1,11 @@
+.buttons {
+    display: inline-flex;
+	column-gap: 8px;
+    justify-content: center;
+}
+
+.resume {
+	align-self: center;
+    display: inline-flex;
+    justify-content: center;
+}

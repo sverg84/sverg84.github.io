@@ -12,7 +12,7 @@ type Props = Readonly<{
 	icon: IconProp;
 }>;
 
-export default function GitHubButton({
+export default function ExternalLinkButton({
 	color,
 	href,
 	icon,

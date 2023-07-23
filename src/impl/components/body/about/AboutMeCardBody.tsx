@@ -5,14 +5,8 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 
 import MyName from '../../../consts/MyName';
+import bodyStyles from '../../../styles/body/about/aboutMeCardBody.module.css';
 import AboutMeText from './AboutMeText';
-
-const PHOTO_HEIGHT_WIDTH: number = 300;
-
-const image: React.CSSProperties = {
-	height: PHOTO_HEIGHT_WIDTH,
-	width: PHOTO_HEIGHT_WIDTH,
-} as const;
 
 export default function AboutMeCardBody(): React.JSX.Element {
 	return (
@@ -22,8 +16,8 @@ export default function AboutMeCardBody(): React.JSX.Element {
 					<Col>
 						<Card.Img
 							alt={`Picture of ${MyName}`}
+							className={bodyStyles.image}
 							src="/sverg.jpeg"
-							style={image}
 						/>
 					</Col>
 					<Col xs={8}>

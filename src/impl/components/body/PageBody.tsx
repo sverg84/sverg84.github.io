@@ -1,19 +1,14 @@
+import classNames from 'classnames';
 import * as React from 'react';
 
-import PageMarginStyle from '../../consts/PageMarginStyle';
+import pageBodyStyles from '../../styles/body/pageBody.module.css';
+import pageStyles from '../../styles/pageMargin.module.css';
 import AboutMeCard from './about/AboutMeCard';
 import ExperienceCard from './experience/ExperienceCard';
 
-const body: React.CSSProperties = {
-	display: 'flex',
-	flexDirection: 'column',
-	marginTop: 24,
-	rowGap: 24,
-} as const;
-
 export default function PageBody(): React.JSX.Element {
 	return (
-		<div style={{...PageMarginStyle, ...body}}>
+		<div className={classNames(pageStyles.page, pageBodyStyles.body)}>
 			<AboutMeCard />
 			<ExperienceCard />
 		</div>
