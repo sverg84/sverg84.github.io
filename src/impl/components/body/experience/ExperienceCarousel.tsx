@@ -2,12 +2,22 @@ import * as React from 'react';
 import Card from 'react-bootstrap/Card';
 import Carousel from 'react-bootstrap/Carousel';
 
+import AppTooltip from '../../AppTooltip';
 import ExperienceCarouselHeader from './ExperienceCarouselHeader';
 import ExperienceCarouselTextSection from './ExperienceCarouselTextSection';
 
 export default function ExperienceCarousel(): React.JSX.Element {
+	const [index, setIndex] = React.useState<number>(0);
+	const onSelect = (newIndex: number) => {
+		setIndex(newIndex);
+	};
+
 	return (
-		<Carousel data-bs-theme="dark">
+		<Carousel
+			activeIndex={index}
+			data-bs-theme="dark"
+			interval={null}
+			onSelect={onSelect}>
 			<Carousel.Item>
 				<Card.Img src="/meta.gif" />
 				<ExperienceCarouselHeader
@@ -35,10 +45,18 @@ export default function ExperienceCarousel(): React.JSX.Element {
 					title="Research Assistant at the University of Michigan"
 				/>
 				<ExperienceCarouselTextSection>
-					<p>
+					<span>
 						Assistant at the university's Transportation Research Institute as
 						part of the Undergraduate Research Opportunity Program (UROP).
-					</p>
+						Participated in{' '}
+						<AppTooltip
+							content="anthropometric"
+							tooltip={
+								'of or relating to the scientific study of the ' +
+								'measurements and proportions of the human body'
+							}
+						/> study for Defence Research & Development Canada (DRDC).
+					</span>
 				</ExperienceCarouselTextSection>
 			</Carousel.Item>
 		</Carousel>
