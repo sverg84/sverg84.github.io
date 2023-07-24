@@ -3,20 +3,20 @@ import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 
 import MyName from '../../consts/MyName.ts';
-import PageMarginStyle from '../../consts/PageMarginStyle.ts';
-import PageColorContext from '../../contexts/PageColorContext.ts';
+import useBackgroundColorStyle from '../../hooks/useBackgroundColorStyle.ts';
+import pageStyles from '../../styles/pageMargin.module.css';
 import PageNavColorPicker from './PageNavColorPicker.tsx';
 
 export default function PageNavBar(): React.JSX.Element {
-	const color = React.useContext(PageColorContext);
+	const className = useBackgroundColorStyle();
 
 	return (
 		<Navbar
+			className={className}
 			expand={false}
 			sticky="top"
-			style={{backgroundColor: color}}
 			variant="dark">
-			<Container style={PageMarginStyle}>
+			<Container className={pageStyles.page}>
 				<Navbar.Brand>{MyName}</Navbar.Brand>
 				<PageNavColorPicker />
 			</Container>

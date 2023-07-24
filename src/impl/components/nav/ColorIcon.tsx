@@ -1,5 +1,7 @@
+import classNames from 'classnames';
 import * as React from 'react';
 
+import useBackgroundColorStyle from '../../hooks/useBackgroundColorStyle';
 import iconStyles from '../../styles/nav/colorIcon.module.css';
 import { PageColorHex } from '../../types/PageColor';
 
@@ -8,10 +10,6 @@ type Props = Readonly<{
 }>;
 
 export default function ColorIcon({color}: Props): React.JSX.Element {
-	return (
-		<div
-			className={iconStyles.icon}
-			style={{backgroundColor: color}}
-		/>
-	);
+	const backgroundColor = useBackgroundColorStyle(color);
+	return <div className={classNames(iconStyles.icon, backgroundColor)} />;
 }

@@ -1,0 +1,11 @@
+.fallback {
+    display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 177px;
+	width: 262px;
+}
+
+.icon {
+    color: white;
+}

@@ -1,27 +1,32 @@
+import classNames from 'classnames';
 import * as React from 'react';
 import Card from 'react-bootstrap/esm/Card';
 import Moment from 'react-moment';
 
 import MyName from '../../../consts/MyName';
-import PageColorContext from '../../../contexts/PageColorContext';
+import useColorStyle from '../../../hooks/useColorStyle';
+import textStyles from '../../../styles/body/about/text.module.css';
 
 const BIRTHDATE: string = '05/06/1998';
 
 export default function AboutMeText(): React.JSX.Element {
-	const color = React.useContext(PageColorContext);
-
-	const pageColorStyle: React.CSSProperties = {
-		color,
-		fontStyle: 'italic',
-		fontWeight: 'bold',
-	} as const;
+	const color = useColorStyle();
 
 	return (
 		<>
-			<h2 style={{color}}>About Me</h2>
+			<h2 className={color}>About Me</h2>
 			<Card.Text>
-				Heylo, my name is <span style={pageColorStyle}>{MyName}</span>.
-                I am {<Moment date={BIRTHDATE} durationFromNow={true} format="yy" />} years old.
+				Heylo, my name is{' '}
+				<span className={classNames(color, textStyles.name)}>{MyName}</span>. I
+				am{' '}
+				{
+					<Moment
+						date={BIRTHDATE}
+						durationFromNow={true}
+						format="yy"
+					/>
+				}{' '}
+				years old.
 			</Card.Text>
 		</>
 	);

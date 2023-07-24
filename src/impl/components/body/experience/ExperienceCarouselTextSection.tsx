@@ -1,10 +1,7 @@
 import * as React from 'react';
 import CarouselCaption from 'react-bootstrap/CarouselCaption';
 
-const style: React.CSSProperties = {
-	marginTop: 36,
-	top: 0,
-} as const;
+import styles from '../../../styles/body/experience/carouselText.module.css';
 
 type Props = Readonly<{
 	children: React.ReactNode;
@@ -16,7 +13,7 @@ export default function ExperienceCarouselTextSection({
 	top = false,
 }: Props): React.JSX.Element {
 	return (
-		<CarouselCaption style={top ? style : undefined}>
+		<CarouselCaption className={top ? styles.top : undefined}>
 			{children}
 		</CarouselCaption>
 	);

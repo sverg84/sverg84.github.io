@@ -5,22 +5,12 @@ import NavDropdown from 'react-bootstrap/esm/NavDropdown';
 import Spinner from 'react-bootstrap/Spinner';
 
 import SetPageColorContext from '../../contexts/SetPageColorContext';
+import styles from '../../styles/nav/colorPicker.module.css';
 import { isPageColor } from '../../types/PageColor';
 
 const PageNavColorPickerMenu = React.lazy(() =>
 	import('./PageNavColorPickerMenu.tsx'),
 );
-
-const DROPDOWN_WIDTH: number = 177;
-const DROPDOWN_HEIGHT: number = 262;
-
-const fallback: React.CSSProperties = {
-	display: 'flex',
-	alignItems: 'center',
-	justifyContent: 'center',
-	height: DROPDOWN_HEIGHT,
-	width: DROPDOWN_WIDTH,
-} as const;
 
 export default function PageNavColorPicker(): React.JSX.Element {
 	const setColor = React.useContext(SetPageColorContext);
@@ -37,8 +27,8 @@ export default function PageNavColorPicker(): React.JSX.Element {
 	return (
 		<NavDropdown
 			align="end"
+			className={styles.icon}
 			renderMenuOnMount={false}
-			style={{color: 'white'}}
 			title={
 				<FontAwesomeIcon
 					icon={solid('palette')}
@@ -48,7 +38,7 @@ export default function PageNavColorPicker(): React.JSX.Element {
 			onSelect={onSelect}>
 			<React.Suspense
 				fallback={
-					<div style={fallback}>
+					<div className={styles.fallback}>
 						<Spinner
 							animation="border"
 							variant="primary"
