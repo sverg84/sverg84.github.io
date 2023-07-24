@@ -1,39 +1,29 @@
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { DataType } from 'csstype';
 import * as React from 'react';
 import Button from 'react-bootstrap/Button';
 
-import useHoverStyle from '../../hooks/useHoverStyle';
+import useHover from '../../hooks/useHover';
 
 type Props = Readonly<{
-	color?: DataType.Color;
+	className?: string;
 	href: string;
 	icon: IconProp;
 }>;
 
 export default function ExternalLinkButton({
-	color,
+	className,
 	href,
 	icon,
 }: Props): React.JSX.Element {
-	const {
-		isHovering: _isHovering,
-		style: hoverStyle,
-		...mouseEvents
-	} = useHoverStyle(color);
-
-	const style: React.CSSProperties | undefined =
-		color != null
-			? ({borderColor: color, color, ...hoverStyle} as const)
-			: undefined;
+	const {isHovering: _isHovering, ...mouseEvents} = useHover();
 
 	return (
 		<Button
+			className={className}
 			href={href}
 			target="_blank"
 			variant="outline-primary"
-			style={style}
 			{...mouseEvents}>
 			<FontAwesomeIcon
 				icon={icon}
