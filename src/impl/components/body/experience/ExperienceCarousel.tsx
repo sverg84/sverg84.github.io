@@ -4,6 +4,7 @@ import Carousel from 'react-bootstrap/Carousel';
 
 import AppTooltip from '../../AppTooltip';
 import ExperienceCarouselHeader from './ExperienceCarouselHeader';
+import ExperienceCarouselSkillsList from './ExperienceCarouselSkillsList';
 import ExperienceCarouselTextSection from './ExperienceCarouselTextSection';
 
 export default function ExperienceCarousel(): React.JSX.Element {
@@ -25,7 +26,16 @@ export default function ExperienceCarousel(): React.JSX.Element {
 					title="Software Engineer at Meta Platforms, Inc."
 				/>
 				<ExperienceCarouselTextSection>
-					<p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+					<p>
+						Full-stack product software engineer (PHP/Hack and JS/React) for Org
+						Effectiveness team within the Enterprise Engineering division.
+						Released multiple high-priority stakeholder feature requests
+						pertaining to HR-sensitive employee data. Leader of team app
+						performance optimization opportunities.
+					</p>
+					<ExperienceCarouselSkillsList
+						skillsList={['PHP', 'React', 'GraphQL', 'MySQL']}
+					/>
 				</ExperienceCarouselTextSection>
 			</Carousel.Item>
 			<Carousel.Item>
@@ -35,7 +45,14 @@ export default function ExperienceCarousel(): React.JSX.Element {
 					title="Software Engineer Intern at Meta Platforms, Inc."
 				/>
 				<ExperienceCarouselTextSection>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+					<p>
+						Intern for the Traffic Analytics team within the Infrastructure
+						division. Created monitoring tool for team oncall to measure network
+						packet failures with interactive web page.
+					</p>
+					<ExperienceCarouselSkillsList
+						skillsList={['C++', 'Python', 'Apache Thrift', 'MySQL']}
+					/>
 				</ExperienceCarouselTextSection>
 			</Carousel.Item>
 			<Carousel.Item>
@@ -55,8 +72,12 @@ export default function ExperienceCarousel(): React.JSX.Element {
 								'of or relating to the scientific study of the ' +
 								'measurements and proportions of the human body'
 							}
-						/> study for Defence Research & Development Canada (DRDC).
+						/>{' '}
+						study for Defence Research & Development Canada (DRDC).
 					</span>
+					<ExperienceCarouselSkillsList
+						skillsList={['MATLAB', 'Wolfram Mathematica']}
+					/>
 				</ExperienceCarouselTextSection>
 			</Carousel.Item>
 		</Carousel>
