@@ -1,2 +1,6 @@
 import * as React from 'react';
-export default function PageBody(): React.JSX.Element;
+type Props = Readonly<{
+    className?: string;
+}>;
+export default function PageBody({ className }: Props): React.JSX.Element;
+export {};
