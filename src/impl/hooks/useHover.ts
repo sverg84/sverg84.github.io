@@ -6,7 +6,7 @@ type ReturnType = Readonly<{
 	onMouseLeave: () => void;
 }>;
 
-export default function useHoverStyle(): ReturnType {
+export default function useHover(): ReturnType {
 	const [isHovering, setIsHovering] = React.useState<boolean>(false);
 
 	const onMouseEnter = () => {

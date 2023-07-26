@@ -3,5 +3,5 @@ type ReturnType = Readonly<{
     onMouseEnter: () => void;
     onMouseLeave: () => void;
 }>;
-export default function useHoverStyle(): ReturnType;
+export default function useHover(): ReturnType;
 export {};

@@ -5,6 +5,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 
 import styles from '../../../styles/body/about/footer.module.css';
+import EmailButton from '../../buttons/EmailButton';
 import GitHubButton from '../../buttons/GitHubButton';
 import LinkedInButton from '../../buttons/LinkedInButton';
 import ResumeButton from '../../buttons/ResumeButton';
@@ -17,6 +18,9 @@ export default function AboutMeCardFooter(): React.JSX.Element {
 				<Row>
 					<Col className={styles.resume}>
 						<ResumeButton />
+					</Col>
+					<Col className={styles.resume}>
+						<EmailButton />
 					</Col>
 					<Col className={styles.buttons}>
 						<GitHubButton />
