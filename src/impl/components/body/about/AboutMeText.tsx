@@ -7,7 +7,7 @@ import MyName from '../../../consts/MyName';
 import useColorStyle from '../../../hooks/useColorStyle';
 import textStyles from '../../../styles/body/about/text.module.css';
 
-const BIRTHDATE: string = '05/06/1998';
+const BIRTHDATE: string = '1998-05-06';
 
 export default function AboutMeText(): React.JSX.Element {
 	const color = useColorStyle();
