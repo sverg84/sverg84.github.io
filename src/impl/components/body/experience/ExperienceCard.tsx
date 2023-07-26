@@ -11,8 +11,10 @@ export default function ExperienceCard(): React.JSX.Element {
 
 	return (
 		<Card>
-			<Card.Header>
-				<h2 className={classNames(styles.header, color)}>Experience</h2>
+			<Card.Header
+				as="h2"
+				className={classNames(styles.header, color)}>
+				Experience
 			</Card.Header>
 			<Card.Body>
 				<ExperienceCarousel />

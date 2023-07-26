@@ -27,8 +27,8 @@ export default function ExperienceCarousel(): React.JSX.Element {
 				/>
 				<ExperienceCarouselTextSection>
 					<p>
-						Full-stack product software engineer (PHP/Hack and JS/React) for Org
-						Effectiveness team within the Enterprise Engineering division.
+						Full-stack product software engineer (PHP/Hack and JS/React) for the
+						Org Effectiveness team within the Enterprise Engineering division.
 						Released multiple high-priority stakeholder feature requests
 						pertaining to HR-sensitive employee data. Leader of team app
 						performance optimization opportunities.
