@@ -1,4 +1,4 @@
-import colors from '../styles/pageBody.module.css';
+import colors from '../styles/background.module.css';
 import { PageColorName } from '../types/PageColor';
 
 export default function useBackgroundStyle(color: PageColorName): string {
