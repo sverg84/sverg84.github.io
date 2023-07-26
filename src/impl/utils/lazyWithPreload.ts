@@ -1,13 +1,13 @@
 import * as React from 'react';
 
-interface PreloadedExoticComponent<T = any>
-	extends React.LazyExoticComponent<React.ComponentType<T>> {
+interface PreloadedExoticComponent<T extends React.ComponentType<any>>
+	extends React.LazyExoticComponent<T> {
 	preload: () => {};
 }
 
-export default function lazyWithPreload<T>(
+export default function lazyWithPreload<T extends React.ComponentType<any>>(
 	factory: () => Promise<{
-		default: React.ComponentType<T>;
+		default: T;
 	}>,
 ): PreloadedExoticComponent<T> {
 	return Object.assign(React.lazy(factory), {preload: factory});
