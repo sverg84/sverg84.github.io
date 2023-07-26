@@ -5,7 +5,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 
 import MyName from '../../../consts/MyName';
-import bodyStyles from '../../../styles/body/about/aboutMeCardBody.module.css';
+import styles from '../../../styles/body/about/aboutMeCardBody.module.css';
 import AboutMeText from './AboutMeText';
 
 export default function AboutMeCardBody(): React.JSX.Element {
@@ -13,10 +13,10 @@ export default function AboutMeCardBody(): React.JSX.Element {
 		<Card.Body>
 			<Container fluid={true}>
 				<Row>
-					<Col>
+					<Col className={styles.imageColumn}>
 						<Card.Img
 							alt={`Picture of ${MyName}`}
-							className={bodyStyles.image}
+							className={styles.image}
 							src="/sverg.jpeg"
 						/>
 					</Col>
