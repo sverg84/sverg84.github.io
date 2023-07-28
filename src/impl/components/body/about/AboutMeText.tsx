@@ -26,12 +26,26 @@ export default function AboutMeText(): React.JSX.Element {
 		<>
 			<Card.Text
 				as="h2"
-				className={color}>
+				className={classNames(
+					color,
+					styles['xs-center'],
+					'text-sm-center',
+					'text-md-center',
+					'text-lg-center',
+					'text-xl-start',
+				)}>
 				About Me
 			</Card.Text>
 			<Card.Text
 				as="h6"
-				className={styles.italic}>
+				className={classNames(
+					styles.italic,
+					styles['xs-center'],
+					'text-sm-center',
+					'text-md-center',
+					'text-lg-center',
+					'text-xl-start',
+				)}>
 				Front-End Software Engineer, Web Developer
 			</Card.Text>
 			<Card.Text>

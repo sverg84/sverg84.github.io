@@ -1,8 +1,14 @@
+.body {
+	row-gap: 24px;
+}
+
 .image {
-	height: 300px;
-	width: 300px;
+	align-self: center;
+	justify-self: center;
+	max-height: 300px;
+	max-width: 300px;
 }
 
 .imageColumn {
-	align-self: center;
+	display: grid;
 }

@@ -11,16 +11,20 @@ import AboutMeText from './AboutMeText';
 export default function AboutMeCardBody(): React.JSX.Element {
 	return (
 		<Card.Body>
-			<Container fluid={true}>
-				<Row>
-					<Col className={styles.imageColumn}>
+			<Container className="justify-content-center">
+				<Row
+					className={styles.body}
+					xs={1}>
+					<Col
+						className={styles.imageColumn}
+						xl={4}>
 						<Card.Img
 							alt={`Picture of ${MyName}`}
 							className={styles.image}
 							src="/sverg.jpeg"
 						/>
 					</Col>
-					<Col xs={8}>
+					<Col xl={8}>
 						<AboutMeText />
 					</Col>
 				</Row>

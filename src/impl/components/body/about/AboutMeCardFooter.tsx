@@ -1,7 +1,6 @@
 import * as React from 'react';
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
-import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 
 import styles from '../../../styles/body/about/footer.module.css';
@@ -14,21 +13,27 @@ import SteamButton from '../../buttons/SteamButton';
 export default function AboutMeCardFooter(): React.JSX.Element {
 	return (
 		<Card.Footer>
-			<Container fluid={true}>
-				<Row>
-					<Col className={styles.resume}>
-						<ResumeButton />
-					</Col>
-					<Col className={styles.resume}>
-						<EmailButton />
-					</Col>
-					<Col className={styles.buttons}>
-						<GitHubButton />
-						<LinkedInButton />
-						<SteamButton />
-					</Col>
-				</Row>
-			</Container>
+			<Row
+				className="gy-3"
+				xs={1}
+				sm={2}
+				md={2}
+				lg={3}>
+				<Col className={styles.resume}>
+					<ResumeButton />
+				</Col>
+				<Col className={styles.resume}>
+					<EmailButton />
+				</Col>
+				<Col
+					className={styles.buttons}
+					sm={12}
+					md={12}>
+					<GitHubButton />
+					<LinkedInButton />
+					<SteamButton />
+				</Col>
+			</Row>
 		</Card.Footer>
 	);
 }

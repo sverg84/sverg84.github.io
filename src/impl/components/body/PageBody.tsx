@@ -6,14 +6,9 @@ import pageStyles from '../../styles/pageMargin.module.css';
 import AboutMeCard from './about/AboutMeCard';
 import ExperienceCard from './experience/ExperienceCard';
 
-type Props = Readonly<{
-	className?: string;
-}>;
-
-export default function PageBody({className}: Props): React.JSX.Element {
+export default function PageBody(): React.JSX.Element {
 	return (
-		<div
-			className={classNames(className, pageStyles.page, pageBodyStyles.body)}>
+		<div className={classNames(pageStyles.page, pageBodyStyles.body)}>
 			<AboutMeCard />
 			<ExperienceCard />
 		</div>
