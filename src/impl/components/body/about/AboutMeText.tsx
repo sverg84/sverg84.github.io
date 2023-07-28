@@ -28,10 +28,7 @@ export default function AboutMeText(): React.JSX.Element {
 				as="h2"
 				className={classNames(
 					color,
-					styles['xs-center'],
-					'text-sm-center',
-					'text-md-center',
-					'text-lg-center',
+					'text-center',
 					'text-xl-start',
 				)}>
 				About Me
@@ -40,10 +37,7 @@ export default function AboutMeText(): React.JSX.Element {
 				as="h6"
 				className={classNames(
 					styles.italic,
-					styles['xs-center'],
-					'text-sm-center',
-					'text-md-center',
-					'text-lg-center',
+					'text-center',
 					'text-xl-start',
 				)}>
 				Front-End Software Engineer, Web Developer

@@ -11,7 +11,7 @@ import AboutMeText from './AboutMeText';
 export default function AboutMeCardBody(): React.JSX.Element {
 	return (
 		<Card.Body>
-			<Container className="justify-content-center">
+			<Container>
 				<Row
 					className={styles.body}
 					xs={1}>

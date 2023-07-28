@@ -5,9 +5,3 @@
 .italic {
     font-style: italic;
 }
-
-@media (min-width: 0) {
-    .xs-center {
-        text-align: center;
-    }
-}
