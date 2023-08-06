@@ -97,6 +97,10 @@
     z-index: 100;
 }
 
+.content p {
+    margin: 0;
+}
+
 .item:nth-child(odd) .content .circle {
     right: auto;
     left: -40px;

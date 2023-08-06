@@ -21,6 +21,7 @@ export default function AboutMeCardBody(): React.JSX.Element {
 						<Card.Img
 							alt={`Picture of ${MyName}`}
 							className={styles.image}
+							loading="lazy"
 							src="/sverg.jpeg"
 						/>
 					</Col>
