@@ -4,7 +4,7 @@ import Card from 'react-bootstrap/Card';
 
 import useColorStyle from '../../../hooks/useColorStyle';
 import styles from '../../../styles/body/experience/card.module.css';
-import ExperienceCarousel from './ExperienceCarousel';
+import ExperienceTimeline from './ExperienceTimeline';
 
 export default function ExperienceCard(): React.JSX.Element {
 	const color = useColorStyle();
@@ -17,7 +17,7 @@ export default function ExperienceCard(): React.JSX.Element {
 				Experience
 			</Card.Header>
 			<Card.Body>
-				<ExperienceCarousel />
+				<ExperienceTimeline />
 			</Card.Body>
 		</Card>
 	);
