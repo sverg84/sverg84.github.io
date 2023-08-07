@@ -52,6 +52,7 @@ export default function ExperienceTimelineItem({
 			<div className={styles.content}>
 				<div className={styles.header}>{header}</div>
 				<h6 className={color}>{data.title}</h6>
+                <img loading="lazy" src={data.src} width="100%" />
 				{data.description}
 				<ExperienceCarouselSkillsList
 					className={color}
