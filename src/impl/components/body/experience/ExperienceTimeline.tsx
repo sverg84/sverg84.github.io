@@ -72,7 +72,6 @@ const items: ReadonlyArray<TimelineItemData> = [
 ];
 
 export default function ExperienceTimeline(): React.JSX.Element {
-
     const color = useAfterColorStyle();
 
 	return (

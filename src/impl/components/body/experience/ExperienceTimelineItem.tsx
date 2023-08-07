@@ -6,9 +6,8 @@ import useBackgroundColorStyle from '../../../hooks/useBackgroundColorStyle';
 import useBorderColorStyle from '../../../hooks/useBorderColorStyle';
 import useColorStyle from '../../../hooks/useColorStyle';
 import styles from '../../../styles/body/experience/timelineItem.module.css';
-import transition from '../../../styles/body/experience/transition.module.css';
-import ExperienceCarouselSkillsList from './ExperienceCarouselSkillsList';
 import type { TimelineItemData } from './ExperienceTimeline';
+import ExperienceCarouselSkillsList from './ExperienceTimelineSkillsList';
 
 type Props = Readonly<{
 	data: TimelineItemData;
@@ -46,20 +45,24 @@ export default function ExperienceTimelineItem({
 	);
 
 	return (
-		<div
-			className={classNames(styles.item, inView ? transition.in : 'opacity-0')}
-			ref={ref}>
-			<div className={styles.content}>
+		<div className={styles.item}>
+			<div
+				className={classNames(styles.content, inView ? styles.in : 'opacity-0')}
+				ref={ref}>
 				<div className={styles.header}>{header}</div>
 				<h6 className={color}>{data.title}</h6>
-                <img loading="lazy" src={data.src} width="100%" />
+				<img
+					loading="lazy"
+					src={data.src}
+					width="100%"
+				/>
 				{data.description}
 				<ExperienceCarouselSkillsList
 					className={color}
 					skillsList={data.skillsList}
 				/>
-				<span className={classNames(styles.circle, border)} />
 			</div>
+			<span className={classNames(styles.circle, border)} />
 		</div>
 	);
 }

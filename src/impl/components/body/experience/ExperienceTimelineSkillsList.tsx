@@ -8,7 +8,7 @@ type Props = Readonly<{
 	skillsList: ReadonlyArray<string>;
 }>;
 
-export default function ExperienceCarouselSkillsList({
+export default function ExperienceTimelineSkillsList({
 	className,
 	skillsList,
 }: Props): React.JSX.Element {
