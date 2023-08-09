@@ -7,7 +7,7 @@ import useBorderColorStyle from '../../../hooks/useBorderColorStyle';
 import useColorStyle from '../../../hooks/useColorStyle';
 import styles from '../../../styles/body/experience/timelineItem.module.css';
 import type { TimelineItemData } from './ExperienceTimeline';
-import ExperienceCarouselSkillsList from './ExperienceTimelineSkillsList';
+import ExperienceTimelineSkillsList from './ExperienceTimelineSkillsList';
 
 type Props = Readonly<{
 	data: TimelineItemData;
@@ -57,7 +57,7 @@ export default function ExperienceTimelineItem({
 					width="100%"
 				/>
 				{data.description}
-				<ExperienceCarouselSkillsList
+				<ExperienceTimelineSkillsList
 					className={color}
 					skillsList={data.skillsList}
 				/>
