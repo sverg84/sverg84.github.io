@@ -7,5 +7,5 @@ export declare const PAGE_COLORS: {
     readonly 'Ogre green': "#c4d300";
 };
 export type PageColorName = keyof typeof PAGE_COLORS;
-export type PageColorHex = typeof PAGE_COLORS[PageColorName];
+export type PageColorHex = (typeof PAGE_COLORS)[PageColorName];
 export declare function isPageColor(value: string | null | undefined): value is PageColorName;

@@ -1,5 +1,5 @@
 export const PAGE_COLORS = {
-	'Obsidian': '#2e3134',
+	Obsidian: '#2e3134',
 	'Baby pink': '#ffc2e2',
 	'Royal blue': '#0504aa',
 	'Phoenix scarlet': '#ea0a13',
@@ -9,7 +9,7 @@ export const PAGE_COLORS = {
 
 export type PageColorName = keyof typeof PAGE_COLORS;
 
-export type PageColorHex = typeof PAGE_COLORS[PageColorName];
+export type PageColorHex = (typeof PAGE_COLORS)[PageColorName];
 
 export function isPageColor(
 	value: string | null | undefined,

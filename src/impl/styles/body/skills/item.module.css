@@ -1,0 +1,28 @@
+.button {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 0.5rem 1rem;
+    width: 100%;
+}
+
+.collapse {
+    background: none;
+    border: none;
+}
+
+.expand {
+    border-width: var(--bs-accordion-border-width);
+    border-color: transparent;
+    border-style: solid;
+}
+
+.firstExpand {
+    border-top-left-radius: var(--bs-accordion-border-radius);
+    border-top-right-radius: var(--bs-accordion-border-radius);
+}
+
+.header {
+    padding: 0;
+}
