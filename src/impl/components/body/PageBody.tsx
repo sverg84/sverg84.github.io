@@ -3,16 +3,15 @@ import * as React from 'react';
 
 import pageBodyStyles from '../../styles/pageBody.module.css';
 import pageStyles from '../../styles/pageMargin.module.css';
-import AboutMeCard from './about/AboutMeCard';
-import ExperienceCard from './experience/ExperienceCard';
-import SkillsCard from './skills/SkillsCard';
 
-export default function PageBody(): React.JSX.Element {
+type Props = Readonly<{
+	children: React.ReactNode;
+}>;
+
+export default function PageBody({children}: Props): React.JSX.Element {
 	return (
 		<div className={classNames(pageStyles.page, pageBodyStyles.body)}>
-			<AboutMeCard />
-			<ExperienceCard />
-			<SkillsCard />
+			{children}
 		</div>
 	);
 }

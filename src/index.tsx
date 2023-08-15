@@ -4,7 +4,8 @@ import * as React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-import App from './impl/components/App';
+import AppJobSeeker from './impl/components/AppJobSeeker';
+import AppPersonal from './impl/components/AppPersonal';
 
 const rootElement: HTMLElement | null = document.getElementById('root');
 
@@ -19,10 +20,13 @@ root.render(
 		<BrowserRouter>
 			<Routes>
 				<Route
-					element={<App />}
+					element={<AppJobSeeker />}
 					path="/"
 				/>
-        <Route element={<h2>Test</h2>} path="/2nd" />
+				<Route
+					element={<AppPersonal />}
+					path="/personal"
+				/>
 			</Routes>
 		</BrowserRouter>
 	</React.StrictMode>,

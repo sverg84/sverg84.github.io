@@ -2,6 +2,7 @@ import classNames from 'classnames';
 import * as React from 'react';
 import Card from 'react-bootstrap/esm/Card';
 import Moment from 'react-moment';
+import { Link } from 'react-router-dom';
 
 import MyName from '../../../consts/MyName';
 import useColorStyle from '../../../hooks/useColorStyle';
@@ -26,20 +27,12 @@ export default function AboutMeText(): React.JSX.Element {
 		<>
 			<Card.Text
 				as="h2"
-				className={classNames(
-					color,
-					'text-center',
-					'text-xl-start',
-				)}>
+				className={classNames(color, 'text-center', 'text-xl-start')}>
 				About Me
 			</Card.Text>
 			<Card.Text
 				as="h6"
-				className={classNames(
-					styles.italic,
-					'text-center',
-					'text-xl-start',
-				)}>
+				className={classNames(styles.italic, 'text-center', 'text-xl-start')}>
 				Front-End Software Engineer, Web Developer
 			</Card.Text>
 			<Card.Text>
@@ -134,6 +127,17 @@ export default function AboutMeText(): React.JSX.Element {
 					/>
 				}{' '}
 				modules.
+			</Card.Text>
+			<Card.Text>
+				Click{' '}
+				{
+					<Link
+						className={classNames(color, styles.bold)}
+						to="/personal">
+						here
+					</Link>
+				}{' '}
+				if you would like to learn more about me beyond my career!
 			</Card.Text>
 		</>
 	);

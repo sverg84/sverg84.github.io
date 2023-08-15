@@ -1,19 +1,23 @@
-import colors from '../styles/background.module.css';
-import { PageColorName } from '../types/PageColor';
+import { useContext } from 'react';
 
-export default function useBackgroundStyle(color: PageColorName): string {
+import PageColorContext from '../contexts/PageColorContext';
+import colors from '../styles/background.module.css';
+import { PAGE_COLORS } from '../types/PageColor';
+
+export default function useBackgroundStyle(): string {
+	const color = useContext(PageColorContext);
 	switch (color) {
-		case 'Obsidian':
+		case PAGE_COLORS.Obsidian:
 			return colors.obsidian;
-		case 'Baby pink':
+		case PAGE_COLORS['Baby pink']:
 			return colors.babypink;
-		case 'Royal blue':
+		case PAGE_COLORS['Royal blue']:
 			return colors.royalblue;
-		case 'Phoenix scarlet':
+		case PAGE_COLORS['Phoenix scarlet']:
 			return colors.phoenixscarlet;
-		case 'Grape jelly':
+		case PAGE_COLORS['Grape jelly']:
 			return colors.grapejelly;
-		case 'Ogre green':
+		case PAGE_COLORS['Ogre green']:
 			return colors.ogregreen;
 	}
 }
