@@ -6,22 +6,19 @@ import Card from 'react-bootstrap/esm/Card';
 import SkillsItemToggle from './SkillsItemToggle';
 
 type Props = Readonly<{
+	children: React.ReactNode;
 	eventKey: string;
-	header: string;
 }>;
 
 export default function SkillsItem({
+	children,
 	eventKey,
-	header,
 }: Props): React.JSX.Element {
 	return (
 		<AccordionItem eventKey={eventKey}>
-			<SkillsItemToggle
-				eventKey={eventKey}
-				label={header}
-			/>
+			<SkillsItemToggle eventKey={eventKey} />
 			<AccordionCollapse eventKey={eventKey}>
-				<Card.Body>{header}</Card.Body>
+				<Card.Body>{children}</Card.Body>
 			</AccordionCollapse>
 		</AccordionItem>
 	);

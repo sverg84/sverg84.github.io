@@ -1,5 +1,11 @@
 declare const EventKeys: {
-    readonly eek: "eek";
-    readonly blep: "blep";
+    readonly cpp: "C++";
+    readonly csharp: "C#";
+    readonly graphql: "GraphQL";
+    readonly hack: "Hack";
+    readonly mysql: "MySQL";
+    readonly python: "Python";
+    readonly react: "React";
+    readonly typescript: "TypeScript";
 };
 export default EventKeys;

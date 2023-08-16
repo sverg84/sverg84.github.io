@@ -1,7 +1,7 @@
 import * as React from 'react';
 type Props = Readonly<{
+    children: React.ReactNode;
     eventKey: string;
-    header: string;
 }>;
-export default function SkillsItem({ eventKey, header, }: Props): React.JSX.Element;
+export default function SkillsItem({ children, eventKey, }: Props): React.JSX.Element;
 export {};

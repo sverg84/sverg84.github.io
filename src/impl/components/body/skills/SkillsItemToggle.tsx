@@ -11,13 +11,11 @@ import styles from '../../../styles/body/skills/item.module.css';
 type Props = Readonly<{
 	callback?: (eventKey: string) => void;
 	eventKey: string;
-	label: string;
 }>;
 
 export default function SkillsItemToggle({
 	callback,
 	eventKey,
-	label,
 }: Props): React.JSX.Element {
 	const {activeEventKey} = React.useContext(AccordionContext);
 	const color = useActiveBackgroundColorStyle();
@@ -32,7 +30,7 @@ export default function SkillsItemToggle({
 	if (isCurrentEventKey) {
 		classnames.push(color);
 		classnames.push(styles.expand);
-		if (eventKey === EventKeys.eek) {
+		if (eventKey === EventKeys.react) {
 			classnames.push(styles.firstExpand);
 		}
 	} else {
@@ -43,7 +41,7 @@ export default function SkillsItemToggle({
 		<button
 			className={classNames(classnames)}
 			onClick={onClick}>
-			{label}
+			{eventKey}
 			<FontAwesomeIcon
 				icon={isCurrentEventKey ? solid('chevron-up') : solid('chevron-down')}
 			/>

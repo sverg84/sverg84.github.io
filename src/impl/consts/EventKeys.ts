@@ -1,6 +1,12 @@
 const EventKeys = {
-	eek: 'eek',
-	blep: 'blep',
+	cpp: 'C++',
+	csharp: 'C#',
+	graphql: 'GraphQL',
+	hack: 'Hack',
+	mysql: 'MySQL',
+	python: 'Python',
+	react: 'React',
+	typescript: 'TypeScript',
 } as const;
 
 export default EventKeys;
