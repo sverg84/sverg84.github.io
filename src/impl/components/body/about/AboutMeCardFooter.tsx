@@ -8,7 +8,6 @@ import EmailButton from '../../buttons/EmailButton';
 import GitHubButton from '../../buttons/GitHubButton';
 import LinkedInButton from '../../buttons/LinkedInButton';
 import ResumeButton from '../../buttons/ResumeButton';
-import SteamButton from '../../buttons/SteamButton';
 
 export default function AboutMeCardFooter(): React.JSX.Element {
 	return (
@@ -31,7 +30,6 @@ export default function AboutMeCardFooter(): React.JSX.Element {
 					md={12}>
 					<GitHubButton />
 					<LinkedInButton />
-					<SteamButton />
 				</Col>
 			</Row>
 		</Card.Footer>

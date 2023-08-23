@@ -17,7 +17,7 @@ export default function PageNavBar(): React.JSX.Element {
 			sticky="top"
 			variant="dark">
 			<Container className={pageStyles.page}>
-				<Navbar.Brand>{MyName}</Navbar.Brand>
+				<Navbar.Brand href='/'>{MyName}</Navbar.Brand>
 				<PageNavColorPicker />
 			</Container>
 		</Navbar>
