@@ -1,0 +1,15 @@
+.brand {
+    font-size: 4vmin;
+}
+
+.navbar {
+    align-items: center;
+    display: inline-flex;
+}
+
+.rightContent {
+    align-items: center;
+    column-gap: 2rem;
+    display: inline-flex;
+    justify-content: flex-end;
+}

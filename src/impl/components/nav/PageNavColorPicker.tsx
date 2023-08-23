@@ -47,7 +47,7 @@ export default function PageNavColorPicker(): React.JSX.Element {
 					<div className={styles.fallback}>
 						<Spinner
 							animation="border"
-							variant="primary"
+							variant="secondary"
 						/>
 					</div>
 				}>

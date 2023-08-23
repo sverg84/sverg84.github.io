@@ -5,7 +5,9 @@ import ExperienceTimeline from './ExperienceTimeline';
 
 export default function ExperienceCard(): React.JSX.Element {
 	return (
-		<BodyCard title="Experience">
+		<BodyCard
+			id="experience"
+			title="Experience">
 			<ExperienceTimeline />
 		</BodyCard>
 	);

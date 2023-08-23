@@ -1,2 +1,6 @@
 import * as React from 'react';
-export default function PageNavBar(): React.JSX.Element;
+type Props = Readonly<{
+    breadcrumbs?: React.JSX.Element | undefined;
+}>;
+export default function PageNavBar({ breadcrumbs }: Props): React.JSX.Element;
+export {};

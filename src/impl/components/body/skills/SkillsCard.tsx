@@ -7,7 +7,7 @@ import SkillsItem from './SkillsItem';
 
 export default function SkillsCard(): React.JSX.Element {
 	return (
-		<BodyCard title="Skills">
+		<BodyCard id="skills" title="Skills">
 			<Accordion defaultActiveKey={EventKeys.react}>
 				<SkillsItem eventKey={EventKeys.react}>
 					Ramped up on React skills while transitioning from web infra (PHP) to

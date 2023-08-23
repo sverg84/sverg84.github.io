@@ -7,14 +7,19 @@ import styles from '../../styles/body/experience/card.module.css';
 
 type Props = Readonly<{
 	children: React.JSX.Element;
+	id?: string;
 	title: string;
 }>;
 
-export default function BodyCard({children, title}: Props): React.JSX.Element {
+export default function BodyCard({
+	children,
+	id,
+	title,
+}: Props): React.JSX.Element {
 	const color = useColorStyle();
 
 	return (
-		<Card>
+		<Card id={id}>
 			<Card.Header
 				as="h2"
 				className={classNames(styles.header, color)}>
