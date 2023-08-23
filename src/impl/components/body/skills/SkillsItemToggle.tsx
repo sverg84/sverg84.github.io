@@ -28,8 +28,7 @@ export default function SkillsItemToggle({
 	const classnames: Array<string> = [styles.button];
 
 	if (isCurrentEventKey) {
-		classnames.push(color);
-		classnames.push(styles.expand);
+		classnames.push(color, styles.expand);
 		if (eventKey === EventKeys.react) {
 			classnames.push(styles.firstExpand);
 		}
