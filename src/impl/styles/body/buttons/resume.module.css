@@ -11,64 +11,64 @@
     border-color: #2e3134;
     box-shadow: 4px 4px #2e3134;
     color: #2e3134;
+}
 
-    &:hover {
-        background-color: #2e3134;
-        color: white;
-    }
+.obsidian:hover {
+    background-color: #2e3134;
+    color: white;
 }
 
 .babypink {
     border-color: #ffc2e2;
     box-shadow: 4px 4px #ffc2e2;
     color: #ffc2e2;
+}
 
-    &:hover {
-        background-color: #ffc2e2;
-        color: white;
-    }
+.babypink:hover {
+    background-color: #ffc2e2;
+    color: white;
 }
 
 .royalblue {
     border-color: #0504aa;
     box-shadow: 4px 4px #0504aa;
     color: #0504aa;
+}
 
-    &:hover {
-        background-color: #0504aa;
-        color: white;
-    }
+.royalblue:hover {
+    background-color: #0504aa;
+    color: white;
 }
 
 .phoenixscarlet {
     border-color: #ea0a13;
     box-shadow: 4px 4px #ea0a13;
     color: #ea0a13;
+}
 
-    &:hover {
-        background-color: #ea0a13;
-        color: white;
-    }
+.phoenixscarlet:hover {
+    background-color: #ea0a13;
+    color: white;
 }
 
 .grapejelly {
     border-color: #8034eb;
     box-shadow: 4px 4px #8034eb;
     color: #8034eb;
+}
 
-    &:hover {
-        background-color: #8034eb;
-        color: white;
-    }
+.grapejelly:hover {
+    background-color: #8034eb;
+    color: white;
 }
 
 .ogregreen {
     border-color: #c4d300;
     box-shadow: 4px 4px #c4d300;
     color: #c4d300;
+}
 
-    &:hover {
-        background-color: #c4d300;
-        color: white;
-    }
+.ogregreen:hover {
+    background-color: #c4d300;
+    color: white;
 }

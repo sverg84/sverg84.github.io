@@ -10,8 +10,8 @@
 	font-weight: bold;
     justify-content: center;
 	text-decoration: none;
+}
 
-    &:hover {
-        border: 0.125rem solid transparent;
-    }
+.button:hover {
+    border: 0.125rem solid transparent;
 }
