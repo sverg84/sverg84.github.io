@@ -65,7 +65,7 @@ export default function AboutMeText(): React.JSX.Element {
 			<Card.Text>
 				Since parting with Meta, I have been self-teaching{' '}
 				{<Language language="TypeScript" />} in order to keep my UI-building
-				skills fresh, replete with {<Language language="CSS" />} modules.
+				skills fresh, replete with {<Language language="SCSS" />} modules.
 			</Card.Text>
 			<Card.Text>
 				Click{' '}
