@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import PageColorContext from '../contexts/PageColorContext';
-import colors from '../styles/color.module.css';
+import colors from '../styles/color.module.scss';
 import { PAGE_COLORS } from '../types/PageColor';
 
 export default function useColorStyle(): string {

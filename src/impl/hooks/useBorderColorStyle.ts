@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import PageColorContext from '../contexts/PageColorContext';
-import colors from '../styles/borderColor.module.css';
+import colors from '../styles/borderColor.module.scss';
 import { PAGE_COLORS } from '../types/PageColor';
 
 export default function useBorderColorStyle(): string {

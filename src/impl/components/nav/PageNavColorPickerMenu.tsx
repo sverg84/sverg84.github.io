@@ -1,7 +1,7 @@
 import * as React from 'react';
 import NavDropdown from 'react-bootstrap/esm/NavDropdown';
 
-import menuStyles from '../../styles/nav/colorPickerMenu.module.css';
+import menuStyles from '../../styles/nav/colorPickerMenu.module.scss';
 import { PAGE_COLORS, PageColorHex } from '../../types/PageColor';
 import ColorIcon from './ColorIcon';
 

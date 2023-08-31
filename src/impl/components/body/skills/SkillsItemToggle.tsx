@@ -6,7 +6,7 @@ import { AccordionContext, useAccordionButton } from 'react-bootstrap';
 
 import EventKeys from '../../../consts/EventKeys';
 import useActiveBackgroundColorStyle from '../../../hooks/useActiveBackgroundColorStyle';
-import styles from '../../../styles/body/skills/item.module.css';
+import styles from '../../../styles/body/skills/item.module.scss';
 
 type Props = Readonly<{
 	callback?: (eventKey: string) => void;
@@ -25,13 +25,13 @@ export default function SkillsItemToggle({
 
 	const isCurrentEventKey = activeEventKey === eventKey;
 
-	const classnames: Array<string> = [styles.button];
+	const classnames: Array<string> = [];
 
 	if (isCurrentEventKey) {
-		classnames.push(color, styles.expand);
-		if (eventKey === EventKeys.react) {
-			classnames.push(styles.firstExpand);
-		}
+		classnames.push(
+			color,
+			eventKey === EventKeys.react ? styles.firstExpand : styles.expand,
+		);
 	} else {
 		classnames.push(styles.collapse);
 	}

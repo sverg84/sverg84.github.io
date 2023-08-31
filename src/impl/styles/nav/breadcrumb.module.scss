@@ -1,0 +1,19 @@
+.breadcrumb {
+    color: white;
+    text-decoration: none;
+}
+
+.bread {
+    margin: 0;
+
+    li {
+        display: inline;
+
+        &:nth-child(n + 2)::before {
+            content: "/";
+            color: white;
+            padding-left: 0.5rem;
+            padding-right: 0.5rem;
+        }
+    }
+}

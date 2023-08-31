@@ -1,0 +1,5 @@
+@use 'colors';
+
+@include colors.color-setter(background-color) {
+    color: white;
+}

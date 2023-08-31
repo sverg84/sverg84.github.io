@@ -5,7 +5,7 @@ import NavDropdown from 'react-bootstrap/esm/NavDropdown';
 import Spinner from 'react-bootstrap/Spinner';
 
 import SetPageColorContext from '../../contexts/SetPageColorContext';
-import styles from '../../styles/nav/colorPicker.module.css';
+import styles from '../../styles/nav/colorPicker.module.scss';
 import { isPageColor } from '../../types/PageColor';
 import lazyWithPreload from '../../utils/lazyWithPreload.ts';
 

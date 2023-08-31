@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import PageColorContext from '../contexts/PageColorContext';
-import colors from '../styles/after.module.css';
+import colors from '../styles/after.module.scss';
 import { PAGE_COLORS } from '../types/PageColor';
 
 export default function useAfterColorStyle(): string {

@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 import MyName from '../../../consts/MyName';
 import useColorStyle from '../../../hooks/useColorStyle';
-import styles from '../../../styles/body/about/text.module.css';
+import styles from '../../../styles/body/about/text.module.scss';
 
 const BIRTHDATE: string = '1998-05-06';
 

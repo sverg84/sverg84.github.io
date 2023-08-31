@@ -2,7 +2,7 @@ import * as React from 'react';
 import Card from 'react-bootstrap/esm/Card';
 import Container from 'react-bootstrap/esm/Container';
 
-import styles from '../../../../styles/body/about/footer.module.css';
+import styles from '../../../../styles/body/about/footer.module.scss';
 import SteamButton from '../../../buttons/SteamButton';
 
 export default function PersonalAboutMeCardFooter(): React.JSX.Element {

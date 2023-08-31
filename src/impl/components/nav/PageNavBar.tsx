@@ -6,8 +6,8 @@ import Navbar from 'react-bootstrap/Navbar';
 
 import MyName from '../../consts/MyName.ts';
 import useBackgroundColorStyle from '../../hooks/useBackgroundColorStyle.ts';
-import navStyles from '../../styles/nav/navbar.module.css';
-import pageStyles from '../../styles/pageMargin.module.css';
+import navStyles from '../../styles/nav/navbar.module.scss';
+import pageStyles from '../../styles/pageMargin.module.scss';
 import PageNavColorPicker from './PageNavColorPicker.tsx';
 
 type Props = Readonly<{

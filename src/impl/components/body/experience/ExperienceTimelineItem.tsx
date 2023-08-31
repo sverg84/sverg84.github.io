@@ -5,7 +5,7 @@ import { useInView } from 'react-intersection-observer';
 import useBackgroundColorStyle from '../../../hooks/useBackgroundColorStyle';
 import useBorderColorStyle from '../../../hooks/useBorderColorStyle';
 import useColorStyle from '../../../hooks/useColorStyle';
-import styles from '../../../styles/body/experience/timelineItem.module.css';
+import styles from '../../../styles/body/experience/timelineItem.module.scss';
 import type { TimelineItemData } from './ExperienceTimeline';
 import ExperienceTimelineSkillsList from './ExperienceTimelineSkillsList';
 

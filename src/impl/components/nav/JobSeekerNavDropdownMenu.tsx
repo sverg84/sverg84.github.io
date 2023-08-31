@@ -3,7 +3,7 @@ import DropdownItem from 'react-bootstrap/esm/DropdownItem';
 import { HashLink } from 'react-router-hash-link';
 
 import JobSeekerNavItems from '../../consts/JobSeekerNavItems';
-import styles from '../../styles/nav/navdropdown.module.css';
+import styles from '../../styles/nav/navdropdown.module.scss';
 
 export default function JobSeekerDropdownMenu(): React.JSX.Element {
 	return (

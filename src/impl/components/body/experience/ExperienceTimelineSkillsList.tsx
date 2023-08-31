@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import * as React from 'react';
 
-import styles from '../../../styles/body/experience/skillsList.module.css';
+import styles from '../../../styles/body/experience/skillsList.module.scss';
 
 type Props = Readonly<{
 	className?: string;

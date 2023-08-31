@@ -1,0 +1,9 @@
+@use '../../colors';
+
+@include colors.color-setter(color, "hover") {
+    align-items: center;
+    display: inline-flex;
+    height: 48px;
+    justify-content: center;
+    width: 57px;
+}

@@ -3,7 +3,7 @@ import CardImg from 'react-bootstrap/esm/CardImg';
 import Container from 'react-bootstrap/esm/Container';
 import Row from 'react-bootstrap/esm/Row';
 
-import styles from '../../../../styles/body/about/aboutMeCardBody.module.css';
+import styles from '../../../../styles/body/about/aboutMeCardBody.module.scss';
 
 type Props = Readonly<{
 	src: string;

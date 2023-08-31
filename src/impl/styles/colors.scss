@@ -1,0 +1,58 @@
+$colors: (
+    "obsidian": #2e3134,
+    "babypink": #ffc2e2,
+    "royalblue": #0504aa,
+    "phoenixscarlet": #ea0a13,
+    "grapejelly": #8034eb,
+    "ogregreen": #c4d300,
+    "github": #171515,
+    "linkedin": #0077b5,
+    "steam": #145c8f,
+);
+
+@function suffix($suffix: null) {
+    @if $suffix == "after" {
+        @return "::after";
+    }
+    @if $suffix == "hover" {
+        @return ":hover";
+    }
+    @return null;
+}
+
+@mixin hover($color, $hex, $resume) {
+    .#{$color} {
+        border-color: $hex;
+        box-shadow: #{if($resume, 4px 4px $hex, null)};
+        color: $hex;
+        @content;
+
+        &:hover {
+            background-color: $hex;
+            color: white;
+        }
+    }
+}
+
+@mixin color-setter($property, $suffix-key: null, $resume: false) {
+    $suffix: suffix($suffix-key);
+
+    @each $color, $hex in $colors {
+        @if $suffix == ":hover" {
+            @include hover($color, $hex, $resume) {
+                @content;
+            };
+        }
+        @else {
+            .#{$color}#{$suffix} {
+                @if $property == background-image {
+                    #{$property}: linear-gradient(-60deg, $hex 50%, white 50%);
+                }
+                @else {
+                    #{$property}: $hex;
+                }
+                @content;
+            }
+        }
+    }
+}

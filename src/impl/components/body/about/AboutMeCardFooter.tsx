@@ -3,7 +3,7 @@ import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 
-import styles from '../../../styles/body/about/footer.module.css';
+import styles from '../../../styles/body/about/footer.module.scss';
 import EmailButton from '../../buttons/EmailButton';
 import GitHubButton from '../../buttons/GitHubButton';
 import LinkedInButton from '../../buttons/LinkedInButton';

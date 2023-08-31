@@ -2,7 +2,7 @@ import classNames from 'classnames';
 import * as React from 'react';
 
 import useBackgroundColorStyle from '../../hooks/useBackgroundColorStyle';
-import iconStyles from '../../styles/nav/colorIcon.module.css';
+import iconStyles from '../../styles/nav/colorIcon.module.scss';
 import { PageColorHex } from '../../types/PageColor';
 
 type Props = Readonly<{

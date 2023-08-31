@@ -2,7 +2,7 @@ import * as React from 'react';
 import { HashLink } from 'react-router-hash-link';
 
 import JobSeekerNavItems from '../../consts/JobSeekerNavItems';
-import styles from '../../styles/nav/breadcrumb.module.css';
+import styles from '../../styles/nav/breadcrumb.module.scss';
 
 function Item({
 	label,

@@ -3,7 +3,7 @@ import NavDropdown from 'react-bootstrap/esm/NavDropdown';
 import Spinner from 'react-bootstrap/esm/Spinner';
 
 import useColorStyle from '../../hooks/useColorStyle.ts';
-import styles from '../../styles/nav/navdropdown.module.css';
+import styles from '../../styles/nav/navdropdown.module.scss';
 import lazyWithPreload from '../../utils/lazyWithPreload';
 
 const JobSeekerDropdownMenu = lazyWithPreload(() =>

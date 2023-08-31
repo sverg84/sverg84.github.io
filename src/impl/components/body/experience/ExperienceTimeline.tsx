@@ -2,7 +2,7 @@ import classNames from 'classnames';
 import * as React from 'react';
 
 import useAfterColorStyle from '../../../hooks/useAfterColorStyle';
-import styles from '../../../styles/body/experience/timeline.module.css';
+import styles from '../../../styles/body/experience/timeline.module.scss';
 import AppTooltip from '../../AppTooltip';
 import ExperienceTimelineItem from './ExperienceTimelineItem';
 

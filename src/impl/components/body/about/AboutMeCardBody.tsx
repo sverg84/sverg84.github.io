@@ -5,7 +5,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 
 import MyName from '../../../consts/MyName';
-import styles from '../../../styles/body/about/aboutMeCardBody.module.css';
+import styles from '../../../styles/body/about/aboutMeCardBody.module.scss';
 import AboutMeText from './AboutMeText';
 
 export default function AboutMeCardBody(): React.JSX.Element {

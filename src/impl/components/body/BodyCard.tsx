@@ -3,7 +3,7 @@ import * as React from 'react';
 import Card from 'react-bootstrap/Card';
 
 import useColorStyle from '../../hooks/useColorStyle';
-import styles from '../../styles/body/experience/card.module.css';
+import styles from '../../styles/body/experience/card.module.scss';
 
 type Props = Readonly<{
 	children: React.JSX.Element;

@@ -8,18 +8,21 @@
 }
 
 .collapse {
+    @extend .button;
     background: none;
     border: none;
     color: black;
 }
 
 .expand {
+    @extend .button;
     border-width: var(--bs-accordion-border-width);
     border-color: transparent;
     border-style: solid;
 }
 
 .firstExpand {
+    @extend .expand;
     border-top-left-radius: var(--bs-accordion-border-radius);
     border-top-right-radius: var(--bs-accordion-border-radius);
 }

@@ -1,8 +1,8 @@
 import classNames from 'classnames';
 import * as React from 'react';
 
-import pageBodyStyles from '../../styles/pageBody.module.css';
-import pageStyles from '../../styles/pageMargin.module.css';
+import pageBodyStyles from '../../styles/pageBody.module.scss';
+import pageStyles from '../../styles/pageMargin.module.scss';
 
 type Props = Readonly<{
 	children: React.ReactNode;
