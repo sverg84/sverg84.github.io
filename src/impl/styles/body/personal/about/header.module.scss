@@ -1,0 +1,31 @@
+.header {
+    display: inline-flex;
+    justify-content: center;
+
+    span {
+        animation: wavy 1.5s ease-in-out infinite;
+        display: inline-block;
+        font-weight: bold;
+        font-size: 2em;
+
+        $delay: 0.0s;
+        @for $i from 1 through 10 {
+            &:nth-of-type(#{$i}) {
+                animation-delay: $delay;
+                $delay: $delay + 0.1s;
+            }
+        }
+    }
+}
+
+@keyframes wavy {
+    0% {
+      transform: translateY(0.4em);
+    }
+    60% {
+      transform: translateY(-0.4em);
+    }
+    100% {
+      transform: translateY(0.4em);
+    }
+  }
