@@ -8,6 +8,7 @@ $colors: (
     "github": #171515,
     "linkedin": #0077b5,
     "steam": #145c8f,
+    "discord": #7289da,
 );
 
 @function suffix($suffix: null) {
@@ -34,10 +35,12 @@ $colors: (
     }
 }
 
-@mixin color-setter($property, $suffix-key: null, $resume: false) {
+@mixin color-setter($property, $suffix-key: null, $resume: false, $opacity-hex: null) {
     $suffix: suffix($suffix-key);
 
     @each $color, $hex in $colors {
+        $hex: #{$hex}#{$opacity-hex};
+
         @if $suffix == ":hover" {
             @include hover($color, $hex, $resume) {
                 @content;

@@ -1,2 +1,2 @@
 import { PageColorHex } from '../types/PageColor';
-export default function useBackgroundColorStyle(colorArg?: PageColorHex): string;
+export default function useBackgroundColorStyle(colorArg?: PageColorHex, translucent?: boolean): string;

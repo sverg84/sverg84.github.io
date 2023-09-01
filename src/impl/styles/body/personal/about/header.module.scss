@@ -6,7 +6,7 @@
         animation: wavy 1.5s ease-in-out infinite;
         display: inline-block;
         font-weight: bold;
-        font-size: 2em;
+        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 
         $delay: 0.0s;
         @for $i from 1 through 10 {
