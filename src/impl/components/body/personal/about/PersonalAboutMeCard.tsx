@@ -9,7 +9,9 @@ export default function PersonalAboutMeCard(): React.JSX.Element {
 	return (
 		<Card>
 			<PersonalAboutMeCardHeader />
-			<PersonalAboutMePhotoCarousel />
+			<Card.Body>
+				<PersonalAboutMePhotoCarousel />
+			</Card.Body>
 			<PersonalAboutMeCardFooter />
 		</Card>
 	);

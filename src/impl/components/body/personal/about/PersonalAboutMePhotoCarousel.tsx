@@ -3,6 +3,8 @@ import Carousel from 'react-bootstrap/esm/Carousel';
 
 import PersonalAboutMeCarouselItem from './PersonalAboutMeCarouselItem';
 
+const IMAGES = ['/portrait-mode.jpg', '/pinksuit.jpeg', '/dokidoki.jpeg'];
+
 export default function PersonalAboutMePhotoCarousel(): React.JSX.Element {
 	return (
 		<Carousel
@@ -11,15 +13,11 @@ export default function PersonalAboutMePhotoCarousel(): React.JSX.Element {
 			indicators={false}
 			interval={4000}
 			wrap={true}>
-			<Carousel.Item>
-				<PersonalAboutMeCarouselItem src="/sverg.jpeg" />
-			</Carousel.Item>
-			<Carousel.Item>
-				<PersonalAboutMeCarouselItem src="/pinksuit.jpeg" />
-			</Carousel.Item>
-			<Carousel.Item>
-				<PersonalAboutMeCarouselItem src="/portrait-mode.jpg" />
-			</Carousel.Item>
+			{IMAGES.map(img => (
+				<Carousel.Item key={img}>
+					<PersonalAboutMeCarouselItem src={img} />
+				</Carousel.Item>
+			))}
 		</Carousel>
 	);
 }

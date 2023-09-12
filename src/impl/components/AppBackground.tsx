@@ -8,9 +8,9 @@ export default function AppBackground(): React.JSX.Element {
 	const color = useBackgroundStyle();
 	return (
 		<>
-			<div className={classNames(color, styles.bg)} />
-			<div className={classNames(color, styles.bg2)} />
-			<div className={classNames(color, styles.bg3)} />
+			{[styles.bg, styles.bg2, styles.bg3].map(style => (
+				<div className={classNames(color, style)} key={style} />
+			))}
 		</>
 	);
 }

@@ -7,8 +7,9 @@ import Page from './Page';
 
 export default function AppJobSeeker(): React.JSX.Element {
 	return (
-		<Page breadcrumbs={<JobSeekerNavWrapper />}>
-			<AppBackground />
+		<Page
+			background={<AppBackground />}
+			breadcrumbs={<JobSeekerNavWrapper />}>
 			<JobSeekerBody />
 		</Page>
 	);
