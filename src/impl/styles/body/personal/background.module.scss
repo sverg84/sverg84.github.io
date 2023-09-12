@@ -1,7 +1,19 @@
-@function multiple-box-shadow ($stars) {
-  $value: '#{random(2000)}px #{random(2000)}px white';
+@use '../../colors';
+
+@function hex-setter($hex) {
+  @if $hex == map-get(colors.$colors, "obsidian") {
+    @return white;
+  }
+  @if $hex == map-get(colors.$colors, "royalblue") {
+    @return cyan;
+  }
+  @return $hex;
+}
+
+@function multiple-box-shadow ($stars, $hex) {
+  $value: '#{random(2000)}px #{random(2000)}px #{$hex}';
   @for $i from 2 through $stars {
-    $value: '#{$value} , #{random(2000)}px #{random(2000)}px white';
+    $value: '#{$value} , #{random(2000)}px #{random(2000)}px #{$hex}';
   }
 
   @return unquote($value);
@@ -14,8 +26,8 @@
   width: $dimension;
 }
 
-@mixin stars($num-stars, $delay, $dimension) {
-  $box-shadow: multiple-box-shadow($num-stars);
+@mixin stars($num-stars, $delay, $dimension, $hex) {
+  $box-shadow: multiple-box-shadow($num-stars, $hex);
 
   @include stars-common($box-shadow, $dimension);
   animation: animStar $delay linear infinite;
@@ -29,25 +41,34 @@
   }
 }
 
-.bg {
-  height: 100%;
-  width: 100%;
-  background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
-  position: fixed;
-  overflow: hidden;
+
+@mixin bg {
+  @each $color, $hex in colors.$colors {
+    $hex: hex-setter($hex);
+
+    .#{$color} {
+      height: 100%;
+      width: 100%;
+      background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
+      position: fixed;
+      overflow: hidden;
+
+      .stars {
+        @include stars(700, 50s, 1px, $hex);
+      }
+          
+      .stars2 {
+        @include stars(200, 100s, 2px, $hex);
+      }
+          
+      .stars3 {
+        @include stars(100, 150s, 3px, $hex);
+      }
+    }
+  }
 }
-    
-.stars {
-  @include stars(700, 50s, 1px);
-}
-    
-.stars2 {
-  @include stars(200, 100s, 2px);
-}
-    
-.stars3 {
-  @include stars(100, 150s, 3px);
-}
+
+@include bg;
     
 @keyframes animStar {
   from {
