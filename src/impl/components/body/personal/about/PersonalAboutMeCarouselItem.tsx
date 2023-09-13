@@ -1,7 +1,7 @@
 import * as React from 'react';
-import CardImg from 'react-bootstrap/esm/CardImg';
+import Card from 'react-bootstrap/esm/Card';
 
-import styles from '../../../../styles/body/about/aboutMeCardBody.module.scss';
+import AboutMeCardBodyContainer from '../../about/AboutMeCardBodyContainer';
 
 type Props = Readonly<{
 	src: string;
@@ -11,10 +11,8 @@ export default function PersonalAboutMeCarouselItem({
 	src,
 }: Props): React.JSX.Element {
 	return (
-		<CardImg
-			className={styles.image}
-			loading="lazy"
-			src={src}
-		/>
+		<AboutMeCardBodyContainer src={src}>
+			<Card.Text>Blep</Card.Text>
+		</AboutMeCardBodyContainer>
 	);
 }
