@@ -1,8 +1,7 @@
 import * as React from 'react';
+import type { Props as ImageProps } from './AboutMeCardImage';
 type Props = Readonly<{
-    alt?: string;
     children: React.JSX.Element;
-    src: string;
-}>;
-export default function AboutMeCardBodyContainer({ alt, children, src }: Props): React.JSX.Element;
+}> & ImageProps;
+export default function AboutMeCardBodyContainer({ children, ...imageProps }: Props): React.JSX.Element;
 export {};
