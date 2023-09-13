@@ -5,7 +5,7 @@ import JobSeekerBody from './body/JobSeekerBody';
 import JobSeekerNavWrapper from './nav/JobSeekerNavWrapper';
 import Page from './Page';
 
-export default function AppJobSeeker(): React.JSX.Element {
+export function Component(): React.JSX.Element {
 	return (
 		<Page
 			background={<AppBackground />}

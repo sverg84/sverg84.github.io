@@ -1,11 +1,16 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import * as React from 'react';
+import Spinner from 'react-bootstrap/esm/Spinner';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import {
+	createBrowserRouter,
+	createRoutesFromElements,
+	Route,
+	RouterProvider,
+} from 'react-router-dom';
 
-import AppJobSeeker from './impl/components/AppJobSeeker';
-import AppPersonal from './impl/components/AppPersonal';
+import styles from './impl/styles/index.module.scss';
 
 const rootElement: HTMLElement | null = document.getElementById('root');
 
@@ -15,19 +20,31 @@ if (rootElement == null) {
 
 const root: ReactDOM.Root = ReactDOM.createRoot(rootElement);
 
+const router = createBrowserRouter(
+	createRoutesFromElements(
+		<>
+			<Route
+				lazy={async () => await import('./impl/components/AppJobSeeker')}
+				path="/"
+			/>
+			,
+			<Route
+				lazy={async () => await import('./impl/components/AppPersonal')}
+				path="/personal"
+			/>
+		</>,
+	),
+);
+
 root.render(
 	<React.StrictMode>
-		<BrowserRouter>
-			<Routes>
-				<Route
-					element={<AppJobSeeker />}
-					path="/"
-				/>
-				<Route
-					element={<AppPersonal />}
-					path="/personal"
-				/>
-			</Routes>
-		</BrowserRouter>
+		<RouterProvider
+			fallbackElement={
+				<div className={styles.fallback}>
+					<Spinner variant="primary" />
+				</div>
+			}
+			router={router}
+		/>
 	</React.StrictMode>,
 );

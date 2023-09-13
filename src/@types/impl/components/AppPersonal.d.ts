@@ -1,2 +1,2 @@
 import * as React from 'react';
-export default function AppPersonal(): React.JSX.Element;
+export declare function Component(): React.JSX.Element;
