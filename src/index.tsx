@@ -21,19 +21,16 @@ if (rootElement == null) {
 const root: ReactDOM.Root = ReactDOM.createRoot(rootElement);
 
 const router = createBrowserRouter(
-	createRoutesFromElements(
-		<>
-			<Route
-				lazy={async () => await import('./impl/components/AppJobSeeker')}
-				path="/"
-			/>
-			,
-			<Route
-				lazy={async () => await import('./impl/components/AppPersonal')}
-				path="/personal"
-			/>
-		</>,
-	),
+	createRoutesFromElements([
+		<Route
+			lazy={async () => await import('./impl/components/AppJobSeeker')}
+			path="/"
+		/>,
+		<Route
+			lazy={async () => await import('./impl/components/AppPersonal')}
+			path="/personal"
+		/>,
+	]),
 );
 
 root.render(
