@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunksverg84_github_io=self.webpackChunksverg84_github_io||[]).push([[217],{1217:function(t,e,r){r.r(e),r.d(e,{default:function(){return a}});r(2791);var s=r(9040),u=r(6638),i=r(184);function a(t){var e=t.alt,r=t.src;return(0,i.jsx)(s.Z,{alt:e,className:u.Z.image,src:r,height:300,width:300})}}}]);
+//# sourceMappingURL=217.6a2ad000.chunk.js.map
