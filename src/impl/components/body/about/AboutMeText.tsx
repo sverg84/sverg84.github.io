@@ -1,14 +1,14 @@
 import classNames from 'classnames';
+import moment from 'moment';
 import * as React from 'react';
 import Card from 'react-bootstrap/esm/Card';
-import Moment from 'react-moment';
 import { Link } from 'react-router-dom';
 
 import MyName from '../../../consts/MyName';
 import useColorStyle from '../../../hooks/useColorStyle';
 import styles from '../../../styles/body/about/text.module.scss';
 
-const BIRTHDATE: string = '1998-05-06';
+const BIRTHDATE: Date = new Date('1998-05-06T10:47:00.000-06:00'); // 6 May 1998 11:47 A.M. US Central Time
 
 function Language({language}: {language: string}): React.JSX.Element {
 	const color = useColorStyle();
@@ -17,6 +17,7 @@ function Language({language}: {language: string}): React.JSX.Element {
 
 export default function AboutMeText(): React.JSX.Element {
 	const color = useColorStyle();
+	const age = moment.duration(moment().diff(BIRTHDATE)).years();
 
 	return (
 		<>
@@ -35,16 +36,8 @@ export default function AboutMeText(): React.JSX.Element {
 				<span className={classNames(color, styles.bold, styles.italic)}>
 					{MyName}
 				</span>
-				. I am a{' '}
-				{
-					<Moment
-						date={BIRTHDATE}
-						durationFromNow={true}
-						format="yy"
-					/>
-				}{' '}
-				year-old software engineer with a fondness for user interface and user
-				experience (UI/UX) development.
+				. I am a {age} year-old software engineer with a fondness for user
+				interface and user experience (UI/UX) development.
 			</Card.Text>
 			<Card.Text>
 				I started learning to code during my senior year of high school when I
