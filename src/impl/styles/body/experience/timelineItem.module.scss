@@ -24,7 +24,7 @@
         z-index: 100;
     }
 
-    &:nth-child(odd) {
+    &:nth-child(even) {
         align-self: flex-end;
         justify-content: flex-start;
         padding-left: 30px;
