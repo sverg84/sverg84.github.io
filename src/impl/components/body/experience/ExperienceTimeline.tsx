@@ -1,7 +1,6 @@
-import classNames from 'classnames';
 import * as React from 'react';
 
-import useAfterColorStyle from '../../../hooks/useAfterColorStyle';
+import useBackgroundColorStyle from '../../../hooks/useBackgroundColorStyle';
 import styles from '../../../styles/body/experience/timeline.module.scss';
 import AppTooltip from '../../AppTooltip';
 import ExperienceTimelineItem from './ExperienceTimelineItem';
@@ -10,7 +9,7 @@ export type TimelineItemData = Readonly<{
 	description: React.JSX.Element;
 	skillsList: ReadonlyArray<string>;
 	src: string;
-    tag: string;
+	tag: string;
 	timeframe: string;
 	title: string;
 }>;
@@ -28,7 +27,7 @@ const items: ReadonlyArray<TimelineItemData> = [
 		),
 		skillsList: ['PHP', 'React', 'GraphQL', 'MySQL'],
 		src: '/meta.gif',
-        tag: 'Meta Platforms, Inc.',
+		tag: 'Meta Platforms, Inc.',
 		timeframe: '2020-2023',
 		title: 'Software Engineer',
 	},
@@ -43,7 +42,7 @@ const items: ReadonlyArray<TimelineItemData> = [
 		),
 		skillsList: ['C++', 'Python', 'Apache Thrift', 'MySQL'],
 		src: '/meta.gif',
-        tag: 'Meta Platforms, Inc.',
+		tag: 'Meta Platforms, Inc.',
 		timeframe: 'Summer 2019',
 		title: 'Software Engineer Intern',
 	},
@@ -65,17 +64,20 @@ const items: ReadonlyArray<TimelineItemData> = [
 		),
 		skillsList: ['MATLAB', 'Wolfram Mathematica'],
 		src: '/umich.jpeg',
-        tag: 'University of Michigan',
+		tag: 'University of Michigan',
 		timeframe: '2016-2017',
 		title: 'Research Assistant',
 	},
 ];
 
 export default function ExperienceTimeline(): React.JSX.Element {
-    const color = useAfterColorStyle();
-
+	const color = useBackgroundColorStyle();
 	return (
-		<div className={classNames(styles.timeline, color)}>
+		<div className={styles.timeline}>
+			<div
+				className={styles.bar}
+				style={color}
+			/>
 			{items.map((item, idx) => (
 				<ExperienceTimelineItem
 					data={item}

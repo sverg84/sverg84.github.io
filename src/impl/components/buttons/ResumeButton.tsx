@@ -5,16 +5,17 @@ import Button from 'react-bootstrap/Button';
 
 import useHover from '../../hooks/useHover';
 import usePageColorButtonStyle from '../../hooks/usePageColorButtonStyle';
+import styles from '../../styles/body/buttons/resume.module.scss';
 
 export default function ResumeButton(): React.JSX.Element {
-	const color = usePageColorButtonStyle();
-
 	const {isHovering, ...mouseEvents} = useHover();
+	const style = usePageColorButtonStyle(isHovering);
 
 	return (
 		<Button
-			className={color}
+			className={styles.resume}
 			href="/sverg_resume.pdf"
+			style={style}
 			target="_blank"
 			variant="outline-light"
 			{...mouseEvents}>

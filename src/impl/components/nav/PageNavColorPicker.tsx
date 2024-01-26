@@ -4,9 +4,7 @@ import * as React from 'react';
 import NavDropdown from 'react-bootstrap/esm/NavDropdown';
 import Spinner from 'react-bootstrap/Spinner';
 
-import SetPageColorContext from '../../contexts/SetPageColorContext';
 import styles from '../../styles/nav/colorPicker.module.scss';
-import { isPageColor } from '../../types/PageColor';
 import lazyWithPreload from '../../utils/lazyWithPreload.ts';
 
 const PageNavColorPickerMenu = lazyWithPreload(() =>
@@ -14,17 +12,6 @@ const PageNavColorPickerMenu = lazyWithPreload(() =>
 );
 
 export default function PageNavColorPicker(): React.JSX.Element {
-	const setColor = React.useContext(SetPageColorContext);
-
-	const onSelect = React.useCallback(
-		(eventKey: string | null) => {
-			if (isPageColor(eventKey)) {
-				setColor(eventKey);
-			}
-		},
-		[setColor],
-	);
-
 	const onMouseEnter = () => {
 		PageNavColorPickerMenu.preload();
 	};
@@ -40,8 +27,7 @@ export default function PageNavColorPicker(): React.JSX.Element {
 					bounce={true}
 				/>
 			}
-			onMouseEnter={onMouseEnter}
-			onSelect={onSelect}>
+			onMouseEnter={onMouseEnter}>
 			<React.Suspense
 				fallback={
 					<div className={styles.fallback}>

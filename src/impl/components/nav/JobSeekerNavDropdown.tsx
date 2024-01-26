@@ -11,7 +11,7 @@ const JobSeekerDropdownMenu = lazyWithPreload(() =>
 );
 
 export default function JobSeekerNavDropdown(): React.JSX.Element {
-	const color = useColorStyle();
+	const style = useColorStyle();
 
 	const onMouseEnter = () => {
 		JobSeekerDropdownMenu.preload();
@@ -27,9 +27,9 @@ export default function JobSeekerNavDropdown(): React.JSX.Element {
 				fallback={
 					<div className={styles.fallback}>
 						<Spinner
-							className={color}
 							animation="border"
 							variant="secondary"
+							style={style}
 						/>
 					</div>
 				}>

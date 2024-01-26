@@ -3,12 +3,11 @@
     flex-direction: column;
     position: relative;
     margin: 40px 0;
+}
 
-    &::after {
-        content: '';
-        position: absolute;
-        left: calc(50% - 2px);
-        width: 4px;
-        height: 100%;
-    }
+.bar {
+    position: absolute;
+    width: 4px;
+    height: 100%;
+    left: calc(50% - 2px);
 }

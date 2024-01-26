@@ -29,7 +29,6 @@ export default function SkillsItemToggle({
 
 	if (isCurrentEventKey) {
 		classnames.push(
-			color,
 			eventKey === EventKeys.react ? styles.firstExpand : styles.expand,
 		);
 	} else {
@@ -39,6 +38,7 @@ export default function SkillsItemToggle({
 	return (
 		<button
 			className={classNames(classnames)}
+			style={isCurrentEventKey ? color : undefined}
 			onClick={onClick}>
 			{eventKey}
 			<FontAwesomeIcon

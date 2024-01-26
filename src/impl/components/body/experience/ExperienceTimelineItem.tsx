@@ -28,7 +28,7 @@ export default function ExperienceTimelineItem({
 	});
 
 	const tag = (
-		<span className={classNames(styles.tag, background)}>{data.tag}</span>
+		<span className={styles.tag} style={background}>{data.tag}</span>
 	);
 	const time = <time>{data.timeframe}</time>;
 
@@ -50,7 +50,7 @@ export default function ExperienceTimelineItem({
 				className={classNames(styles.content, inView ? styles.in : 'opacity-0')}
 				ref={ref}>
 				<div className={styles.header}>{header}</div>
-				<h6 className={color}>{data.title}</h6>
+				<h6 style={color}>{data.title}</h6>
 				<img
 					loading="lazy"
 					src={data.src}
@@ -58,11 +58,14 @@ export default function ExperienceTimelineItem({
 				/>
 				{data.description}
 				<ExperienceTimelineSkillsList
-					className={color}
+					style={color}
 					skillsList={data.skillsList}
 				/>
 			</div>
-			<span className={classNames(styles.circle, border)} />
+			<span
+				className={styles.circle}
+				style={border}
+			/>
 		</div>
 	);
 }

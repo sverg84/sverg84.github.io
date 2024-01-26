@@ -1,2 +1,2 @@
-import { PageColorHex } from '../types/PageColor';
-export default function useBackgroundColorStyle(colorArg?: PageColorHex, translucent?: boolean): string;
+import * as React from 'react';
+export default function useBackgroundColorStyle(alpha?: string): React.CSSProperties;

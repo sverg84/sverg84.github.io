@@ -1,7 +1,7 @@
 import * as React from 'react';
 type Props = Readonly<{
-    className?: string;
     skillsList: ReadonlyArray<string>;
+    style?: React.CSSProperties;
 }>;
-export default function ExperienceTimelineSkillsList({ className, skillsList, }: Props): React.JSX.Element;
+export default function ExperienceTimelineSkillsList({ skillsList, style, }: Props): React.JSX.Element;
 export {};

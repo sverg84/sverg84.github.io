@@ -1,4 +1,3 @@
-import classNames from 'classnames';
 import * as React from 'react';
 import Card from 'react-bootstrap/Card';
 
@@ -22,7 +21,8 @@ export default function BodyCard({
 		<Card id={id}>
 			<Card.Header
 				as="h2"
-				className={classNames(styles.header, color)}>
+				className={styles.header}
+				style={color}>
 				{title}
 			</Card.Header>
 			<Card.Body>{children}</Card.Body>

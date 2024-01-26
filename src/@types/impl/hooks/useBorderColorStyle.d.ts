@@ -1,1 +1,2 @@
-export default function useBorderColorStyle(): string;
+import * as React from 'react';
+export default function useBorderColorStyle(): React.CSSProperties;

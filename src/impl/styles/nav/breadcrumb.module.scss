@@ -1,5 +1,5 @@
 .breadcrumb {
-    color: white;
+    color: inherit;
     text-decoration: none;
 }
 
@@ -11,7 +11,7 @@
 
         &:nth-child(n + 2)::before {
             content: "/";
-            color: white;
+            color: inherit;
             padding-left: 0.5rem;
             padding-right: 0.5rem;
         }

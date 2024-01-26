@@ -12,7 +12,13 @@ const BIRTHDATE: Date = new Date('1998-05-06T10:47:00.000-06:00'); // 6 May 1998
 
 function Language({language}: {language: string}): React.JSX.Element {
 	const color = useColorStyle();
-	return <span className={classNames(color, styles.bold)}>{language}</span>;
+	return (
+		<span
+			className={styles.bold}
+			style={color}>
+			{language}
+		</span>
+	);
 }
 
 export default function AboutMeText(): React.JSX.Element {
@@ -23,7 +29,8 @@ export default function AboutMeText(): React.JSX.Element {
 		<>
 			<Card.Text
 				as="h2"
-				className={classNames(color, 'text-center', 'text-xl-start')}>
+				className={classNames('text-center', 'text-xl-start')}
+				style={color}>
 				About Me
 			</Card.Text>
 			<Card.Text
@@ -33,7 +40,9 @@ export default function AboutMeText(): React.JSX.Element {
 			</Card.Text>
 			<Card.Text>
 				Hi there! My name is{' '}
-				<span className={classNames(color, styles.bold, styles.italic)}>
+				<span
+					className={classNames(styles.bold, styles.italic)}
+					style={color}>
 					{MyName}
 				</span>
 				. I am a {age} year-old software engineer with a fondness for user
@@ -64,7 +73,8 @@ export default function AboutMeText(): React.JSX.Element {
 				Click{' '}
 				{
 					<Link
-						className={classNames(color, styles.bold)}
+						className={styles.bold}
+						style={color}
 						to="/personal">
 						here
 					</Link>

@@ -1,6 +1,4 @@
-@use '../../colors';
-
-@include colors.color-setter(color, "hover", true) {
+.resume {
     align-items: center;
 	column-gap: 8px;
 	display: inline-flex;

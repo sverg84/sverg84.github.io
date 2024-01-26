@@ -1,24 +1,9 @@
 import * as React from 'react';
 
-import PageColorContext from '../contexts/PageColorContext';
-import colors from '../styles/color.module.scss';
-import { PAGE_COLORS } from '../types/PageColor';
+import ColorContext from '../contexts/ColorContext';
 
-export default function useColorStyle(): string {
-    const color = React.useContext(PageColorContext);
+export default function useColorStyle(): React.CSSProperties {
+    const {color} = React.useContext(ColorContext);
 
-    switch (color) {
-        case PAGE_COLORS.Obsidian:
-            return colors.obsidian;
-        case PAGE_COLORS['Baby pink']:
-            return colors.babypink;
-        case PAGE_COLORS['Royal blue']:
-            return colors.royalblue;
-        case PAGE_COLORS['Phoenix scarlet']:
-            return colors.phoenixscarlet;
-        case PAGE_COLORS['Grape jelly']:
-            return colors.grapejelly;
-        case PAGE_COLORS['Ogre green']:
-            return colors.ogregreen;
-    }
+    return {color};
 }

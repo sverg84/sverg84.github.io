@@ -1,4 +1,3 @@
-import classNames from 'classnames';
 import * as React from 'react';
 
 import useBackgroundStyle from '../hooks/useBackgroundStyle';
@@ -8,8 +7,12 @@ export default function AppBackground(): React.JSX.Element {
 	const color = useBackgroundStyle();
 	return (
 		<>
-			{[styles.bg, styles.bg2, styles.bg3].map(style => (
-				<div className={classNames(color, style)} key={style} />
+			{[styles.bg, styles.bg2, styles.bg3].map(bg => (
+				<div
+					className={bg}
+					key={bg}
+					style={color}
+				/>
 			))}
 		</>
 	);

@@ -16,15 +16,13 @@
 
 .expand {
     @extend .button;
-    border-width: var(--bs-accordion-border-width);
-    border-color: transparent;
-    border-style: solid;
+    border-width: 0;
 }
 
 .firstExpand {
     @extend .expand;
-    border-top-left-radius: var(--bs-accordion-border-radius);
-    border-top-right-radius: var(--bs-accordion-border-radius);
+    border-top-left-radius: var(--bs-accordion-inner-border-radius);
+    border-top-right-radius: var(--bs-accordion-inner-border-radius);
 }
 
 .header {
