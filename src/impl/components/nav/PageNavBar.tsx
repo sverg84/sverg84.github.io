@@ -3,13 +3,14 @@ import * as React from 'react';
 import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/esm/Col';
 import Navbar from 'react-bootstrap/Navbar';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import MyName from '../../consts/MyName.ts';
 import useBackgroundColorStyle from '../../hooks/useBackgroundColorStyle.ts';
 import navStyles from '../../styles/nav/navbar.module.scss';
 import pageStyles from '../../styles/pageMargin.module.scss';
 import PageNavColorPicker from './PageNavColorPicker.tsx';
+import PageNavLatestPushTimestamp from './PageNavLatestPushTimestamp.tsx';
 
 type Props = Readonly<{
 	breadcrumbs?: React.JSX.Element | undefined;
@@ -17,6 +18,7 @@ type Props = Readonly<{
 
 export default function PageNavBar({breadcrumbs}: Props): React.JSX.Element {
 	const style = useBackgroundColorStyle();
+
 	return (
 		<Navbar
 			expand={false}
@@ -29,6 +31,9 @@ export default function PageNavBar({breadcrumbs}: Props): React.JSX.Element {
 						to="/">
 						{MyName}
 					</Link>
+				</Col>
+				<Col className={navStyles.pushTime}>
+					<PageNavLatestPushTimestamp />
 				</Col>
 				<Col className={navStyles.rightContent}>
 					{breadcrumbs}
