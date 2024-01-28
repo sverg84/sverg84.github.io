@@ -1,8 +1,9 @@
 import * as React from 'react';
-import { useState } from 'react';
 
 import ColorContext from '../contexts/ColorContext';
 import PageNavBar from './nav/PageNavBar';
+
+const DEFAULT_COLOR = '#2e3134';
 
 type Props = Readonly<{
 	background: React.JSX.Element;
@@ -15,7 +16,13 @@ export default function Page({
 	breadcrumbs,
 	children,
 }: Props): React.JSX.Element {
-	const [hex, setHex] = useState<string>('#2e3134');
+	const localStorageColorOrDefault =
+		localStorage.getItem('color') ?? DEFAULT_COLOR;
+	const [hex, setHex] = React.useState<string>(localStorageColorOrDefault);
+
+	React.useEffect(() => {
+		localStorage.setItem('color', hex);
+	}, [hex]);
 
 	return (
 		<ColorContext.Provider value={{color: hex, setColor: setHex}}>
