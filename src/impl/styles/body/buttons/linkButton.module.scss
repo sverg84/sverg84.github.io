@@ -1,9 +1,28 @@
-@use '../../colors';
+$colors: (
+    "facebook": #1877f2,
+    "github": #171515,
+    "linkedin": #0077b5,
+    "steam": #145c8f,
+    "discord": #7289da,
+);
 
-@include colors.color-setter(color, "hover") {
-    align-items: center;
-    display: inline-flex;
-    height: 48px;
-    justify-content: center;
-    width: 57px;
+@mixin mixin($color, $hex) {
+    .#{$color} {
+        border-color: $hex;
+        color: $hex;
+        align-items: center;
+        display: inline-flex;
+        height: 48px;
+        justify-content: center;
+        width: 56px;
+
+        &:hover {
+            background-color: $hex;
+            color: white;
+        }
+    }
+}
+
+@each $color, $hex in $colors {
+    @include mixin($color, #{$hex});
 }

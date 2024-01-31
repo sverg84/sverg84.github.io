@@ -1,4 +1,4 @@
-import { IconProp } from '@fortawesome/fontawesome-svg-core';
+import { IconLookup } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import * as React from 'react';
 import Button from 'react-bootstrap/Button';
@@ -8,7 +8,7 @@ import useHover from '../../hooks/useHover';
 type Props = Readonly<{
 	className?: string;
 	href: string;
-	icon: IconProp;
+	icon: IconLookup;
 }>;
 
 export default function ExternalLinkButton({
