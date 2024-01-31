@@ -25,7 +25,7 @@ export default function Page({
 	}, [hex]);
 
 	return (
-		<ColorContext.Provider value={{color: hex, setColor: setHex}}>
+		<ColorContext.Provider value={[hex, setHex]}>
 			{background}
 			<PageNavBar breadcrumbs={breadcrumbs} />
 			{children}

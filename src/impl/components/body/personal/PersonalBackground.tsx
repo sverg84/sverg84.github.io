@@ -18,7 +18,7 @@ const STARS: ReadonlyArray<StarsProps> = [
 ];
 
 function Stars({className, numStars}: StarsProps): React.JSX.Element {
-	const {color} = React.useContext(ColorContext);
+	const [color] = React.useContext(ColorContext);
 
 	const colorForStars = React.useMemo(() => {
 		const colorBrightness = brightnessFromHexCode(color);

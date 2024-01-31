@@ -6,7 +6,7 @@ import useTextColorForCustomBackground from './useTextColorForCustomBackground';
 export default function usePageColorButtonStyle(
 	isHovering: boolean,
 ): React.CSSProperties {
-	const {color} = React.useContext(ColorContext);
+	const [color] = React.useContext(ColorContext);
 	const hoverTextColor = useTextColorForCustomBackground();
 
 	const borderAndTextColor = isHovering ? hoverTextColor : color;

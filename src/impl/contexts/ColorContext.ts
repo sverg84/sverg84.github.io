@@ -1,11 +1,7 @@
 import { createContext } from 'react';
 
-type ContextType = Readonly<{
-	color: string;
-	setColor: React.Dispatch<React.SetStateAction<string>>;
-}>;
+type ContextType = Readonly<
+	[string, React.Dispatch<React.SetStateAction<string>>]
+>;
 
-export default createContext<ContextType>({
-	color: '#2e3134',
-	setColor: () => {},
-});
+export default createContext<ContextType>(['#2e3134', () => {}]);

@@ -6,7 +6,7 @@ import ColorContext from '../../contexts/ColorContext';
 import styles from '../../styles/nav/colorPickerMenu.module.scss';
 
 export default function PageNavColorPickerMenu(): React.JSX.Element {
-	const {color, setColor} = React.useContext(ColorContext);
+	const [color, setColor] = React.useContext(ColorContext);
 
 	return (
 		<>
