@@ -1,21 +1,13 @@
 import * as React from 'react';
+import { Outlet } from 'react-router-dom';
 
 import ColorContext from '../contexts/ColorContext';
+import PageBody from './body/PageBody';
 import PageNavBar from './nav/PageNavBar';
 
 const DEFAULT_COLOR = '#2e3134';
 
-type Props = Readonly<{
-	background: React.JSX.Element;
-	breadcrumbs?: React.JSX.Element;
-	children: React.ReactNode;
-}>;
-
-export default function Page({
-	background,
-	breadcrumbs,
-	children,
-}: Props): React.JSX.Element {
+export default function AppCore(): React.JSX.Element {
 	const localStorageColorOrDefault =
 		localStorage.getItem('color') ?? DEFAULT_COLOR;
 	const [hex, setHex] = React.useState<string>(localStorageColorOrDefault);
@@ -26,9 +18,10 @@ export default function Page({
 
 	return (
 		<ColorContext.Provider value={[hex, setHex]}>
-			{background}
-			<PageNavBar breadcrumbs={breadcrumbs} />
-			{children}
+			<PageNavBar />
+			<PageBody>
+				<Outlet />
+			</PageBody>
 		</ColorContext.Provider>
 	);
 }

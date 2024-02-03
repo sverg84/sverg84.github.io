@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useLocation } from 'react-router-dom';
 
 const SCREEN_WIDTH_BREAKPOINT = 835;
 
@@ -10,6 +11,8 @@ export default function JobSeekerNavWrapper(): React.JSX.Element | null {
 	const [Module, setModule] = React.useState<React.LazyExoticComponent<
 		() => React.JSX.Element
 	> | null>(null);
+
+	const {pathname} = useLocation();
 
 	const updateMedia = () => {
 		setIsDesktop(window.innerWidth > SCREEN_WIDTH_BREAKPOINT);
@@ -23,16 +26,18 @@ export default function JobSeekerNavWrapper(): React.JSX.Element | null {
 	React.useEffect(() => {
 		const conditionalImport = async () => {
 			setModule(
-				React.lazy(
-					async () =>
-						await (isDesktop
-							? import('./JobSeekerNavBreadcrumbs')
-							: import('./JobSeekerNavDropdown')),
-				),
+				pathname === '/'
+					? React.lazy(
+							async () =>
+								await (isDesktop
+									? import('./JobSeekerNavBreadcrumbs')
+									: import('./JobSeekerNavDropdown')),
+					  )
+					: null,
 			);
 		};
 		conditionalImport();
-	}, [isDesktop]);
+	}, [isDesktop, pathname]);
 
 	return Module != null ? (
 		<React.Suspense fallback={null}>

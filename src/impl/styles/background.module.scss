@@ -1,12 +1,8 @@
+@use './backgroundCommon.module.scss';
+
 .bg {
     animation: slide 3s ease-in-out infinite alternate;
-    bottom: 0;
-    left: -50%;
-    opacity: .5;
-    position: fixed;
-    right: -50%;
-    top: 0;
-    z-index: -1;
+    @include backgroundCommon.bg-common(0.5);
 }
 
 .bg2 {

@@ -9,14 +9,11 @@ import MyName from '../../consts/MyName.ts';
 import useBackgroundColorStyle from '../../hooks/useBackgroundColorStyle.ts';
 import navStyles from '../../styles/nav/navbar.module.scss';
 import pageStyles from '../../styles/pageMargin.module.scss';
+import JobSeekerNavWrapper from './JobSeekerNavWrapper.tsx';
 import PageNavColorPicker from './PageNavColorPicker.tsx';
 import PageNavLatestPushTimestamp from './PageNavLatestPushTimestamp.tsx';
 
-type Props = Readonly<{
-	breadcrumbs?: React.JSX.Element | undefined;
-}>;
-
-export default function PageNavBar({breadcrumbs}: Props): React.JSX.Element {
+export default function PageNavBar(): React.JSX.Element {
 	const style = useBackgroundColorStyle();
 
 	return (
@@ -36,7 +33,7 @@ export default function PageNavBar({breadcrumbs}: Props): React.JSX.Element {
 					<PageNavLatestPushTimestamp />
 				</Col>
 				<Col className={navStyles.rightContent}>
-					{breadcrumbs}
+					<JobSeekerNavWrapper />
 					<PageNavColorPicker />
 				</Col>
 			</Container>

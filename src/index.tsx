@@ -10,6 +10,7 @@ import {
 	RouterProvider,
 } from 'react-router-dom';
 
+import AppCore from './impl/components/AppCore';
 import styles from './impl/styles/index.module.scss';
 
 const rootElement: HTMLElement | null = document.getElementById('root');
@@ -23,13 +24,19 @@ const root: ReactDOM.Root = ReactDOM.createRoot(rootElement);
 const router = createBrowserRouter(
 	createRoutesFromElements([
 		<Route
-			lazy={async () => await import('./impl/components/AppJobSeeker')}
 			path="/"
-		/>,
-		<Route
-			lazy={async () => await import('./impl/components/AppPersonal')}
-			path="/personal"
-		/>,
+			element={<AppCore />}>
+			<Route
+				index={true}
+				lazy={async () => await import('./impl/components/AppJobSeeker')}
+			/>
+			,
+			<Route
+				lazy={async () => await import('./impl/components/AppPersonal')}
+				path="personal"
+			/>
+			,
+		</Route>,
 	]),
 );
 
