@@ -1,9 +1,9 @@
 import * as React from 'react';
 import CardHeader from 'react-bootstrap/esm/CardHeader';
 
-import useBackgroundColorStyle from '../../../../hooks/useBackgroundColorStyle';
-import useColorStyle from '../../../../hooks/useColorStyle';
-import styles from '../../../../styles/body/personal/about/header.module.scss';
+import useBackgroundColorStyle from '../../../hooks/useBackgroundColorStyle';
+import useColorStyle from '../../../hooks/useColorStyle';
+import styles from '../../../styles/body/personal/about/header.module.scss';
 
 const HALF_OPACITY = '88';
 const HEADER_LABEL = 'Oh, Hello!';

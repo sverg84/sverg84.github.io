@@ -1,7 +1,7 @@
 import * as React from 'react';
 
-import PersonalBackground from './body/personal/PersonalBackground';
-import PersonalBody from './body/PersonalBody';
+import PersonalBackground from './PersonalBackground';
+import PersonalBody from './PersonalBody';
 
 export function Component(): React.JSX.Element {
 	return (

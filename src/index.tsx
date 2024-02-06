@@ -32,7 +32,7 @@ const router = createBrowserRouter(
 			/>
 			,
 			<Route
-				lazy={async () => await import('./impl/components/AppPersonal')}
+				lazy={async () => await import('./impl/components/personal/AppPersonal')}
 				path="personal"
 			/>
 			,

@@ -1,8 +1,8 @@
 import * as React from 'react';
 
-import ColorContext from '../../../contexts/ColorContext';
-import styles from '../../../styles/body/personal/background.module.scss';
-import brightnessFromHexCode from '../../../utils/brightnessFromHexCode';
+import ColorContext from '../../contexts/ColorContext';
+import styles from '../../styles/body/personal/background.module.scss';
+import brightnessFromHexCode from '../../utils/brightnessFromHexCode';
 
 type StarsProps = Readonly<{
 	className: string;

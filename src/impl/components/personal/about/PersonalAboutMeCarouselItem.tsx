@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Card from 'react-bootstrap/esm/Card';
 
-import AboutMeCardBodyContainer from '../../about/AboutMeCardBodyContainer';
+import AboutMeCardBodyContainer from '../../body/about/AboutMeCardBodyContainer';
 
 type Props = Readonly<{
 	src: string;
