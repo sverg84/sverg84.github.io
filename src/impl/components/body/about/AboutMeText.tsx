@@ -73,6 +73,7 @@ export default function AboutMeText(): React.JSX.Element {
 				Click{' '}
 				{
 					<Link
+						data-testid="personal-link"
 						className={styles.bold}
 						style={color}
 						to="/personal">

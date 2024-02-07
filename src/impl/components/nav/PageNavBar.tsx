@@ -25,6 +25,7 @@ export default function PageNavBar(): React.JSX.Element {
 				<Col>
 					<Link
 						className={navStyles.brand}
+						data-testid="name-link"
 						to="/">
 						{MyName}
 					</Link>
