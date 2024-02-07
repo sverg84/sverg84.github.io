@@ -30,7 +30,7 @@
     "predeploy": "yarn run build",
     "deploy": "gh-pages -d build",
     "start": "react-app-rewired start",
-    "build": "react-app-rewired build",
+    "build": "GENERATE_SOURCEMAP=false react-app-rewired build",
     "test": "react-app-rewired test --testPathIgnorePatterns='^.*e2e.test.(js|tsx)$'",
     "e2e": "react-app-rewired test --testPathPattern='^.*e2e.test.(js|tsx)$'",
     "eject": "react-scripts eject"

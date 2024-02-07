@@ -1,6 +1,5 @@
 import * as React from 'react';
 
-import token from '../../../token';
 import AppTooltip from '../AppTooltip';
 
 // https://stackoverflow.com/questions/6108819/javascript-timestamp-to-relative-time
@@ -34,11 +33,6 @@ export default function PageNavLatestPushTimestamp(): React.JSX.Element | null {
 			try {
 				const response = await fetch(
 					'https://api.github.com/repos/sverg84/sverg84.github.io',
-					{
-						headers: {
-							Authorization: `token ${token}`,
-						},
-					},
 				);
 				if (!response.ok) {
 					throw new Error(`${response.status}: ${response.statusText}`);
