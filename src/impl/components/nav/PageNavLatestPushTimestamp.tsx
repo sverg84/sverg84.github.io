@@ -33,6 +33,11 @@ export default function PageNavLatestPushTimestamp(): React.JSX.Element | null {
 			try {
 				const response = await fetch(
 					'https://api.github.com/repos/sverg84/sverg84.github.io',
+					{
+						headers: {
+							Authorization: 'token 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',
+						},
+					},
 				);
 				if (!response.ok) {
 					throw new Error(`${response.status}: ${response.statusText}`);
