@@ -20,6 +20,7 @@ export default function PageNavColorPickerMenu(): React.JSX.Element {
 				/>
 				<HexColorInput
 					color={color}
+					data-testid="color-input"
 					onChange={setColor}
 				/>
 			</div>

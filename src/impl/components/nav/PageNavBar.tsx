@@ -18,6 +18,7 @@ export default function PageNavBar(): React.JSX.Element {
 
 	return (
 		<Navbar
+			data-testid="navbar"
 			expand={false}
 			sticky="top"
 			style={style}>

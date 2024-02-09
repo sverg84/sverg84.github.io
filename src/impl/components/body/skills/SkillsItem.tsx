@@ -17,7 +17,10 @@ export default function SkillsItem({
 	return (
 		<AccordionItem eventKey={eventKey}>
 			<SkillsItemToggle eventKey={eventKey} />
-			<AccordionCollapse eventKey={eventKey}>
+			<AccordionCollapse
+				eventKey={eventKey}
+				mountOnEnter={true}
+				unmountOnExit={true}>
 				<Card.Body>{children}</Card.Body>
 			</AccordionCollapse>
 		</AccordionItem>

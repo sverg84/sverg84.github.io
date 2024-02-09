@@ -1,4 +1,4 @@
-import * as React from 'react';
+import '@testing-library/jest-dom';
 
 jest.mock('@fortawesome/fontawesome-svg-core/import.macro', () => {
 	const mockIconLookup = {prefix: 'fas', iconName: 'up'};

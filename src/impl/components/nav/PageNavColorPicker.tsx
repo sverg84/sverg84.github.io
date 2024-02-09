@@ -20,6 +20,7 @@ export default function PageNavColorPicker(): React.JSX.Element {
 		<NavDropdown
 			align="end"
 			className={styles.icon}
+			data-testid="color-icon"
 			renderMenuOnMount={false}
 			title={
 				<FontAwesomeIcon
@@ -30,7 +31,9 @@ export default function PageNavColorPicker(): React.JSX.Element {
 			onMouseEnter={onMouseEnter}>
 			<React.Suspense
 				fallback={
-					<div className={styles.fallback}>
+					<div
+						className={styles.fallback}
+						data-testid="color-suspense">
 						<Spinner
 							animation="border"
 							variant="secondary"
