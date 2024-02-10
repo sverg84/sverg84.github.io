@@ -48,6 +48,7 @@ export default function ExperienceTimelineItem({
 		<div className={styles.item}>
 			<div
 				className={classNames(styles.content, inView ? styles.in : 'opacity-0')}
+				data-testid={`exp-item-${data.id}`}
 				ref={ref}>
 				<div className={styles.header}>{header}</div>
 				<h6 style={color}>{data.title}</h6>

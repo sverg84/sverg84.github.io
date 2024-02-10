@@ -7,6 +7,7 @@ import ExperienceTimelineItem from './ExperienceTimelineItem';
 
 export type TimelineItemData = Readonly<{
 	description: React.JSX.Element;
+	id: string;
 	skillsList: ReadonlyArray<string>;
 	src: string;
 	tag: string;
@@ -25,6 +26,7 @@ const items: ReadonlyArray<TimelineItemData> = [
 				opportunities.
 			</p>
 		),
+		id: 'meta_swe',
 		skillsList: ['PHP', 'React', 'GraphQL', 'MySQL'],
 		src: '/meta.gif',
 		tag: 'Meta Platforms, Inc.',
@@ -40,6 +42,7 @@ const items: ReadonlyArray<TimelineItemData> = [
 				packet failures with interactive web page.
 			</p>
 		),
+		id: 'meta_intern',
 		skillsList: ['C++', 'Python', 'Apache Thrift', 'MySQL'],
 		src: '/meta.gif',
 		tag: 'Meta Platforms, Inc.',
@@ -62,6 +65,7 @@ const items: ReadonlyArray<TimelineItemData> = [
 				study for Defence Research & Development Canada (DRDC).
 			</p>
 		),
+		id: 'umich_urop',
 		skillsList: ['MATLAB', 'Wolfram Mathematica'],
 		src: '/umich.jpeg',
 		tag: 'University of Michigan',
@@ -82,7 +86,7 @@ export default function ExperienceTimeline(): React.JSX.Element {
 				<ExperienceTimelineItem
 					data={item}
 					isOdd={idx % 2 !== 0}
-					key={item.title}
+					key={item.id}
 				/>
 			))}
 		</div>
