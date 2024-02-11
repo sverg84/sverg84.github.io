@@ -5,6 +5,8 @@ import ColorContext from '../contexts/ColorContext';
 import PageBody from './body/PageBody';
 import PageNavBar from './nav/PageNavBar';
 
+const AppWeather = React.lazy(() => import('./AppWeather'));
+
 const DEFAULT_COLOR = '#2e3134';
 
 export default function AppCore(): React.JSX.Element {
@@ -19,6 +21,9 @@ export default function AppCore(): React.JSX.Element {
 	return (
 		<ColorContext.Provider value={[hex, setHex]}>
 			<PageNavBar />
+			<React.Suspense>
+				<AppWeather />
+			</React.Suspense>
 			<PageBody>
 				<Outlet />
 			</PageBody>

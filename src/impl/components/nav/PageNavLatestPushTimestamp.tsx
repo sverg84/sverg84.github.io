@@ -34,11 +34,7 @@ export default function PageNavLatestPushTimestamp(): React.JSX.Element | null {
 				const response = await fetch(
 					'https://3a15ktad20.execute-api.us-east-2.amazonaws.com/Production/',
 				);
-				if (!response.ok) {
-					throw new Error(`${response.status}: ${response.statusText}`);
-				}
-				const data = await response.json();
-				const updateTime: string = data['pushed_at'];
+				const updateTime: string = await response.json();
 				setLastUpdatedTime(new Date(updateTime));
 			} catch (error) {
 				console.warn(error);
