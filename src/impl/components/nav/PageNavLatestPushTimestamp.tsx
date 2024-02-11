@@ -32,7 +32,7 @@ export default function PageNavLatestPushTimestamp(): React.JSX.Element | null {
 		const fetchTime = async () => {
 			try {
 				const response = await fetch(
-					'https://api.github.com/repos/sverg84/sverg84.github.io',
+					'https://3a15ktad20.execute-api.us-east-2.amazonaws.com/Production/',
 				);
 				if (!response.ok) {
 					throw new Error(`${response.status}: ${response.statusText}`);
