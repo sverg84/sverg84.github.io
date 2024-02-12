@@ -1,6 +1,6 @@
 @use '../styles/anim.module.scss';
 
-.eek {
+.weather {
     color: white;
     position: fixed;
     bottom: 1.5em;
@@ -20,7 +20,7 @@
     background: linear-gradient(to top, #283E51, #0A2342);
 }
 
-.idk {
+.content {
     display: flex;
     flex-direction: column;
     align-items: center;

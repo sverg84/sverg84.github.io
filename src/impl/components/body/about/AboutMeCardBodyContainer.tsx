@@ -28,7 +28,16 @@ export default function AboutMeCardBodyContainer({
 						xl={4}>
 						<AboutMeCardLazyImage {...imageProps} />
 					</Col>
-					<Col xl={8}>{children}</Col>
+					<Col xl={8}>
+						{children}
+						<iframe
+							src="https://open.spotify.com/embed/playlist/37i9dQZF1EVJHK7Q1TBABQ?utm_source=generator&theme=0"
+							width="100%"
+							height="152"
+							allow="encrypted-media;"
+							loading="lazy"
+						/>
+					</Col>
 				</Row>
 			</Container>
 		</Card.Body>

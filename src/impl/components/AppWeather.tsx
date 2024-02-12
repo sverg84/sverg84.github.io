@@ -43,13 +43,14 @@ export default function AppWeather(): React.JSX.Element | null {
 	}, []);
 
 	return weather != null ? (
-		<div className={classNames(styles.eek, className)}>
-			<div className={styles.idk}>
+		<div className={classNames(styles.weather, className)}>
+			<div className={styles.content}>
 				{weather.city}
 				<OverlayTrigger
 					placement="left"
 					overlay={<Tooltip>{weather.description}</Tooltip>}>
 					<img
+						alt={weather.description}
 						className={styles.img}
 						ref={ref}
 						src={weather.icon}
