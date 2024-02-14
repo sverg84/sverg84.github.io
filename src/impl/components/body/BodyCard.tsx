@@ -19,13 +19,14 @@ export default function BodyCard({
 
 	return (
 		<Card id={id}>
-			<Card.Header
-				as="h2"
-				className={styles.header}
-				style={color}>
-				{title}
+			<Card.Header as="header">
+				<h2
+					className={styles.header}
+					style={color}>
+					{title}
+				</h2>
 			</Card.Header>
-			<Card.Body>{children}</Card.Body>
+			<Card.Body as="section">{children}</Card.Body>
 		</Card>
 	);
 }

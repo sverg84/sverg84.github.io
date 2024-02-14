@@ -8,8 +8,8 @@ import usePageColorButtonStyle from '../../hooks/usePageColorButtonStyle';
 import styles from '../../styles/body/buttons/resume.module.scss';
 
 export default function ResumeButton(): React.JSX.Element {
-	const {isHovering, ...mouseEvents} = useHover();
-	const style = usePageColorButtonStyle(isHovering);
+	const {isActive, ...mouseEvents} = useHover();
+	const style = usePageColorButtonStyle(isActive);
 
 	return (
 		<Button
@@ -19,9 +19,9 @@ export default function ResumeButton(): React.JSX.Element {
 			target="_blank"
 			variant="outline-light"
 			{...mouseEvents}>
-			<span>Download resume</span>
+			<label>Download resume</label>
 			<FontAwesomeIcon
-				beat={isHovering}
+				beat={isActive}
 				icon={solid('download')}
 			/>
 		</Button>

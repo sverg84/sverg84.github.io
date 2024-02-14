@@ -27,7 +27,7 @@ export default function AboutMeCardBodyContainer({
 	};
 
 	return (
-		<Card.Body>
+		<Card.Body as="section">
 			<Container>
 				<Row
 					className={styles.body}

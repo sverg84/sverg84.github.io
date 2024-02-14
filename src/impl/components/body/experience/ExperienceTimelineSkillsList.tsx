@@ -12,13 +12,17 @@ export default function ExperienceTimelineSkillsList({
 	style,
 }: Props): React.JSX.Element {
 	return (
-		<p className={styles.list}>
-			<span
-				className={styles.skills}
+		<section className={styles.section}>
+			<label
+				className={styles.label}
 				style={style}>
-				Skills:{' '}
-			</span>
-			{skillsList.join(', ')}
-		</p>
+				Skills:
+			</label>
+			<ul className={styles.list}>
+				{skillsList.map(skill => (
+					<li key={skill}>{skill}</li>
+				))}
+			</ul>
+		</section>
 	);
 }

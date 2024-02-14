@@ -11,7 +11,7 @@ import ResumeButton from '../../buttons/ResumeButton';
 
 export default function AboutMeCardFooter(): React.JSX.Element {
 	return (
-		<Card.Footer>
+		<Card.Footer as="footer">
 			<Row
 				className="gy-3"
 				xs={1}

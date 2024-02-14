@@ -1,13 +1,16 @@
 import * as React from 'react';
 
 type ReturnType = Readonly<{
-	isHovering: boolean;
+	isActive: boolean;
+	onBlur: () => void;
+	onFocus: () => void;
 	onMouseEnter: () => void;
 	onMouseLeave: () => void;
 }>;
 
 export default function useHover(): ReturnType {
 	const [isHovering, setIsHovering] = React.useState<boolean>(false);
+	const [isFocused, setIsFocused] = React.useState<boolean>(false);
 
 	const onMouseEnter = () => {
 		setIsHovering(true);
@@ -17,5 +20,19 @@ export default function useHover(): ReturnType {
 		setIsHovering(false);
 	};
 
-	return {isHovering, onMouseEnter, onMouseLeave};
+	const onFocus = () => {
+		setIsFocused(true);
+	};
+
+	const onBlur = () => {
+		setIsFocused(false);
+	};
+
+	return {
+		isActive: isHovering || isFocused,
+		onBlur,
+		onFocus,
+		onMouseEnter,
+		onMouseLeave,
+	};
 }

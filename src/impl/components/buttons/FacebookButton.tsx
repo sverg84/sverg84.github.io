@@ -7,9 +7,10 @@ import ExternalLinkButton from './ExternalLinkButton';
 export default function FacebookButton(): React.JSX.Element {
 	return (
 		<ExternalLinkButton
-            className={styles.facebook}
+			className={styles.facebook}
 			href="https://www.facebook.com/stephen.vergara.0/"
 			icon={brands('facebook')}
+			label="Facebook"
 		/>
 	);
 }

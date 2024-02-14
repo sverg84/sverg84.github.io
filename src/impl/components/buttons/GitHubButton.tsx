@@ -10,6 +10,7 @@ export default function GitHubButton(): React.JSX.Element {
 			className={styles.github}
 			href="https://github.com/sverg84"
 			icon={brands('github')}
+			label="GitHub"
 		/>
 	);
 }

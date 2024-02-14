@@ -8,7 +8,7 @@ import styles from '../../styles/nav/colorPicker.module.scss';
 import lazyWithPreload from '../../utils/lazyWithPreload.ts';
 
 const PageNavColorPickerMenu = lazyWithPreload(() =>
-	import('./PageNavColorPickerMenu.tsx'),
+	import('./PageNavColorPickerMenu'),
 );
 
 export default function PageNavColorPicker(): React.JSX.Element {
@@ -18,6 +18,8 @@ export default function PageNavColorPicker(): React.JSX.Element {
 
 	return (
 		<NavDropdown
+			aria-label="Color picker"
+			as="button"
 			align="end"
 			className={styles.icon}
 			data-testid="color-icon"

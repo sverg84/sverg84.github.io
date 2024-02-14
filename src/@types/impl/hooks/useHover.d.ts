@@ -1,5 +1,7 @@
 type ReturnType = Readonly<{
-    isHovering: boolean;
+    isActive: boolean;
+    onBlur: () => void;
+    onFocus: () => void;
     onMouseEnter: () => void;
     onMouseLeave: () => void;
 }>;

@@ -10,20 +10,24 @@ export default function PageNavColorPickerMenu(): React.JSX.Element {
 
 	return (
 		<>
-			<NavDropdown.Header className={styles.header}>
+			<NavDropdown.Header
+				as="header"
+				className={styles.header}>
 				Color Picker
 			</NavDropdown.Header>
-			<div className={styles.picker}>
+			<section className={styles.picker}>
 				<HexColorPicker
+					aria-label="Color picker item with color scale"
 					color={color}
 					onChange={setColor}
 				/>
 				<HexColorInput
+					aria-label="Input field for hexadecimal color code"
 					color={color}
 					data-testid="color-input"
 					onChange={setColor}
 				/>
-			</div>
+			</section>
 		</>
 	);
 }

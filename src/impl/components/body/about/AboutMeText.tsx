@@ -12,13 +12,7 @@ const BIRTHDATE: Date = new Date('1998-05-06T10:47:00.000-06:00'); // 6 May 1998
 
 function Language({language}: {language: string}): React.JSX.Element {
 	const color = useColorStyle();
-	return (
-		<span
-			className={styles.bold}
-			style={color}>
-			{language}
-		</span>
-	);
+	return <strong style={color}>{language}</strong>;
 }
 
 export default function AboutMeText(): React.JSX.Element {
@@ -45,8 +39,8 @@ export default function AboutMeText(): React.JSX.Element {
 					style={color}>
 					{MyName}
 				</span>
-				. I am a {age} year-old software engineer with a fondness for user
-				interface and user experience (UI/UX) development.
+				. I am a <time>{age}</time> year-old software engineer with a fondness
+				for user interface and user experience (UI/UX) development.
 			</Card.Text>
 			<Card.Text>
 				I started learning to code during my senior year of high school when I
@@ -74,10 +68,9 @@ export default function AboutMeText(): React.JSX.Element {
 				{
 					<Link
 						data-testid="personal-link"
-						className={styles.bold}
 						style={color}
 						to="/personal">
-						here
+						<strong>here</strong>
 					</Link>
 				}{' '}
 				if you would like to learn more about me beyond my career!

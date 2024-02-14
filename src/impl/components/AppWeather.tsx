@@ -43,8 +43,8 @@ export default function AppWeather(): React.JSX.Element | null {
 	}, []);
 
 	return weather != null ? (
-		<div className={classNames(styles.weather, className)}>
-			<div className={styles.content}>
+		<article className={classNames(styles.weather, className)}>
+			<article className={styles.content}>
 				{weather.city}
 				<OverlayTrigger
 					placement="left"
@@ -59,7 +59,7 @@ export default function AppWeather(): React.JSX.Element | null {
 					/>
 				</OverlayTrigger>
 				{weather.fahrenheit}&deg;F / {weather.celsius}&deg;C
-			</div>
-		</div>
+			</article>
+		</article>
 	) : null;
 }

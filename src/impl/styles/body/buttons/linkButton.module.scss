@@ -6,6 +6,11 @@ $colors: (
     "discord": #7289da,
 );
 
+@mixin a11y($hex) {
+    background-color: $hex;
+    color: white;
+}
+
 @mixin mixin($color, $hex) {
     .#{$color} {
         border-color: $hex;
@@ -17,8 +22,13 @@ $colors: (
         width: 56px;
 
         &:hover {
-            background-color: $hex;
-            color: white;
+            @include a11y($hex);
+        }
+
+        &:focus-visible {
+            @include a11y($hex);
+        box-shadow: 0px 0px 0px 4px $hex;
+            border-color: white;
         }
     }
 }

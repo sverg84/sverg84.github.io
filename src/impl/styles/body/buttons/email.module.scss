@@ -14,4 +14,9 @@
     &:hover {
         border: 0.125rem solid transparent;
     }
+
+    &:focus-visible {
+        box-shadow: 0 0 0 4px #5e72e3;
+        border-color: white;
+    }
 }

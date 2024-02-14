@@ -1,8 +1,22 @@
-.list {
+.section {
     align-self: center;
+    display: inline-flex;
+    column-gap: 4px;
 }
 
-.skills {
-    font-style: italic;
+.label {
     font-weight: bold;
+}
+
+.list {
+    list-style: none;
+    padding: 0;
+}
+
+.list li {
+    display: inline;
+
+    &:nth-last-child(n+2)::after {
+        content: ", ";
+    }
 }

@@ -4,6 +4,7 @@ type Props = Readonly<{
     className?: string;
     href: string;
     icon: IconLookup;
+    label: string;
 }>;
-export default function ExternalLinkButton({ className, href, icon, }: Props): React.JSX.Element;
+export default function ExternalLinkButton({ className, href, icon, label, }: Props): React.JSX.Element;
 export {};

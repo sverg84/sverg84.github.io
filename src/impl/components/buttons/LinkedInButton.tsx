@@ -10,6 +10,7 @@ export default function LinkedInButton(): React.JSX.Element {
 			className={styles.linkedin}
 			href="https://www.linkedin.com/in/stephen-vergara-2bab8614b/"
 			icon={brands('linkedin')}
+			label="LinkedIn"
 		/>
 	);
 }

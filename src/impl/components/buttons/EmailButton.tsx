@@ -7,15 +7,16 @@ import useHover from '../../hooks/useHover';
 import styles from '../../styles/body/buttons/email.module.scss';
 
 export default function EmailButton(): React.JSX.Element {
-	const {isHovering, ...mouseEvents} = useHover();
+	const {isActive, ...mouseEvents} = useHover();
 
 	return (
 		<Button
+			aria-label="Email"
 			className={styles.button}
 			href="mailto:sverg84@gmail.com"
 			{...mouseEvents}>
 			<FontAwesomeIcon
-				fade={isHovering}
+				fade={isActive}
 				icon={solid('envelope')}
 				size="2xl"
 			/>
