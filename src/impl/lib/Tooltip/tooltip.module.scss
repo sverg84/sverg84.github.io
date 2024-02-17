@@ -1,0 +1,18 @@
+$tooltip-color: #383838;
+
+.tooltip {
+    background-color: $tooltip-color;
+    color: white;
+    font-size: 90%;
+    text-align: center;
+    padding: 4px 8px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    width: max-content;
+    max-width: calc(20vw - 10px);
+    z-index: 1200;
+}
+
+.arrow {
+    fill: $tooltip-color;
+}

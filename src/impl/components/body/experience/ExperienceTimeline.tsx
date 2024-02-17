@@ -56,8 +56,8 @@ const items: ReadonlyArray<TimelineItemData> = [
 				of the Undergraduate Research Opportunity Program (UROP). Participated
 				in{' '}
 				<AppTooltip
-					content="anthropometric"
-					tooltip={
+					trigger="anthropometric"
+					content={
 						'of or relating to the scientific study of the ' +
 						'measurements and proportions of the human body'
 					}

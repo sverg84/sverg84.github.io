@@ -36,8 +36,8 @@ export default function PageNavLatestPushTimestamp({
 		<span>
 			Last Updated:{' '}
 			<AppTooltip
-				content={<time>{relativeTimeFromElapsed(timeSinceLastUpdate)}</time>}
-				tooltip={lastUpdatedTime.toLocaleString(undefined)}
+				trigger={<time>{relativeTimeFromElapsed(timeSinceLastUpdate)}</time>}
+				content={lastUpdatedTime.toLocaleString(undefined)}
 			/>
 		</span>
 	);

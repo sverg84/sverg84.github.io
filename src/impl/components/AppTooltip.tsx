@@ -1,28 +1,30 @@
+import type { Placement } from '@floating-ui/react';
+import {
+	Tooltip,
+	TooltipContent,
+	TooltipTrigger,
+} from 'impl/lib/Tooltip/Tooltip';
 import * as React from 'react';
-import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
-import Tooltip from 'react-bootstrap/Tooltip';
-import { useInView } from 'react-intersection-observer';
 
 import styles from '../styles/tooltip.module.scss';
 
 type Props = Readonly<{
-	content: React.ReactNode;
-	tooltip: string;
+	placement?: Placement;
+	trigger: React.ReactNode;
+	content: string;
 }>;
 
 export default function AppTooltip({
+	placement = 'top',
+	trigger,
 	content,
-	tooltip,
 }: Props): React.JSX.Element {
-	const {ref, entry} = useInView({
-		rootMargin: '-50% 0px 0px',
-	});
-
 	return (
-		<OverlayTrigger
-			placement={entry?.isIntersecting ? 'top' : 'bottom'}
-			overlay={<Tooltip>{tooltip}</Tooltip>}>
-			<span className={styles.tooltip} ref={ref}>{content}</span>
-		</OverlayTrigger>
+		<Tooltip placement={placement}>
+			<TooltipTrigger asChild={true}>
+				<span className={styles.tooltip}>{trigger}</span>
+			</TooltipTrigger>
+			<TooltipContent>{content}</TooltipContent>
+		</Tooltip>
 	);
 }

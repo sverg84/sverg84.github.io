@@ -1,8 +1,8 @@
 import classNames from 'classnames';
 import * as React from 'react';
-import { OverlayTrigger, Tooltip } from 'react-bootstrap';
 
 import styles from '../styles/weather.module.scss';
+import AppTooltip from './AppTooltip';
 
 type WeatherData = Readonly<{
 	celsius: number;
@@ -46,18 +46,19 @@ export default function AppWeather(): React.JSX.Element | null {
 		<article className={classNames(styles.weather, className)}>
 			<article className={styles.content}>
 				{weather.city}
-				<OverlayTrigger
+				<AppTooltip
 					placement="left"
-					overlay={<Tooltip>{weather.description}</Tooltip>}>
-					<img
-						alt={weather.description}
-						className={styles.img}
-						ref={ref}
-						src={weather.icon}
-						width={64}
-						height={64}
-					/>
-				</OverlayTrigger>
+					trigger={
+						<img
+							alt={weather.description}
+							className={styles.img}
+							ref={ref}
+							src={weather.icon}
+							width={64}
+							height={64}
+						/>
+					}
+					content={weather.description}></AppTooltip>
 				{weather.fahrenheit}&deg;F / {weather.celsius}&deg;C
 			</article>
 		</article>
