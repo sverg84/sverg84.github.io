@@ -1,26 +1,20 @@
 {
   "files": {
-    "main.css": "/static/css/main.36bffb31.css",
-    "main.js": "/static/js/main.9e6b037e.js",
-    "static/css/125.8bc40f00.chunk.css": "/static/css/125.8bc40f00.chunk.css",
-    "static/js/125.18cf4c31.chunk.js": "/static/js/125.18cf4c31.chunk.js",
-    "static/css/570.1ccc1d4c.chunk.css": "/static/css/570.1ccc1d4c.chunk.css",
-    "static/js/570.d1f9314f.chunk.js": "/static/js/570.d1f9314f.chunk.js",
+    "main.css": "/static/css/main.d3bdd6b5.css",
+    "main.js": "/static/js/main.95e368d9.js",
+    "static/css/555.722a4b7f.chunk.css": "/static/css/555.722a4b7f.chunk.css",
+    "static/js/555.2be8a861.chunk.js": "/static/js/555.2be8a861.chunk.js",
+    "static/css/147.95fe05ae.chunk.css": "/static/css/147.95fe05ae.chunk.css",
+    "static/js/147.c58ec156.chunk.js": "/static/js/147.c58ec156.chunk.js",
     "static/css/948.df486840.chunk.css": "/static/css/948.df486840.chunk.css",
-    "static/js/948.252d428c.chunk.js": "/static/js/948.252d428c.chunk.js",
-    "static/css/102.5d55780e.chunk.css": "/static/css/102.5d55780e.chunk.css",
-    "static/js/102.8ecd081e.chunk.js": "/static/js/102.8ecd081e.chunk.js",
-    "static/css/59.640b2277.chunk.css": "/static/css/59.640b2277.chunk.css",
-    "static/js/59.6dd1db4c.chunk.js": "/static/js/59.6dd1db4c.chunk.js",
-    "static/css/33.4b89160a.chunk.css": "/static/css/33.4b89160a.chunk.css",
-    "static/js/33.6a400de4.chunk.js": "/static/js/33.6a400de4.chunk.js",
-    "static/js/367.3c3265e8.chunk.js": "/static/js/367.3c3265e8.chunk.js",
-    "static/js/386.6d835e95.chunk.js": "/static/js/386.6d835e95.chunk.js",
-    "static/js/779.9e98253f.chunk.js": "/static/js/779.9e98253f.chunk.js",
+    "static/js/948.42092333.chunk.js": "/static/js/948.42092333.chunk.js",
+    "static/js/993.0baefa70.chunk.js": "/static/js/993.0baefa70.chunk.js",
+    "static/js/367.3523bd22.chunk.js": "/static/js/367.3523bd22.chunk.js",
+    "static/js/262.7197f8bf.chunk.js": "/static/js/262.7197f8bf.chunk.js",
     "index.html": "/index.html"
   },
   "entrypoints": [
-    "static/css/main.36bffb31.css",
-    "static/js/main.9e6b037e.js"
+    "static/css/main.d3bdd6b5.css",
+    "static/js/main.95e368d9.js"
   ]
 }
