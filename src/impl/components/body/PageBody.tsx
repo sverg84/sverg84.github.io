@@ -1,17 +1,10 @@
-import classNames from 'classnames';
+import styles from 'impl/styles/pageMargin.module.scss';
 import * as React from 'react';
-
-import pageBodyStyles from '../../styles/pageBody.module.scss';
-import pageStyles from '../../styles/pageMargin.module.scss';
 
 type Props = Readonly<{
 	children: React.ReactNode;
 }>;
 
 export default function PageBody({children}: Props): React.JSX.Element {
-	return (
-		<div className={classNames(pageStyles.page, pageBodyStyles.body)}>
-			{children}
-		</div>
-	);
+	return <div className={styles.page}>{children}</div>;
 }

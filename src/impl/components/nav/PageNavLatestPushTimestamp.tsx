@@ -23,40 +23,22 @@ function relativeTimeFromElapsed(elapsed: number): string {
 	return '';
 }
 
-export default function PageNavLatestPushTimestamp(): React.JSX.Element | null {
-	const [lastUpdatedTime, setLastUpdatedTime] = React.useState<Date | null>(
-		null,
-	);
+type Props = Readonly<{
+	lastUpdatedTime: Date;
+}>;
 
-	React.useEffect(() => {
-		const fetchTime = async () => {
-			try {
-				const response = await fetch(
-					'https://3a15ktad20.execute-api.us-east-2.amazonaws.com/Production/',
-				);
-				const updateTime: string = await response.json();
-				setLastUpdatedTime(new Date(updateTime));
-			} catch (error) {
-				console.warn(error);
-			}
-		};
-
-		fetchTime();
-	}, []);
-
-	if (lastUpdatedTime == null) {
-		return null;
-	}
-
+export default function PageNavLatestPushTimestamp({
+	lastUpdatedTime,
+}: Props): React.JSX.Element {
 	const timeSinceLastUpdate = lastUpdatedTime.getTime() - new Date().getTime();
 
 	return (
-		<>
+		<span>
 			Last Updated:{' '}
 			<AppTooltip
-				content={relativeTimeFromElapsed(timeSinceLastUpdate)}
+				content={<time>{relativeTimeFromElapsed(timeSinceLastUpdate)}</time>}
 				tooltip={lastUpdatedTime.toLocaleString(undefined)}
 			/>
-		</>
+		</span>
 	);
 }

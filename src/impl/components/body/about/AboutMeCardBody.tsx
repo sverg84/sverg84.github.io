@@ -1,6 +1,6 @@
+import MyName from 'impl/consts/MyName';
 import * as React from 'react';
 
-import MyName from '../../../consts/MyName';
 import AboutMeCardBodyContainer from './AboutMeCardBodyContainer';
 import AboutMeText from './AboutMeText';
 

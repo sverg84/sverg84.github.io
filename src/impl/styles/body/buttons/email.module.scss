@@ -1,8 +1,11 @@
+@mixin border {
+    border: 0.125rem solid transparent;
+}
+
 .button {
     align-items: center;
     background: linear-gradient(#5e72e3, #70f0fe) padding-box,
                 linear-gradient(#5e72e3, #70f0fe) border-box;
-    border: 0.125rem solid transparent;
     color: white;
     column-gap: 8px;
 	cursor: pointer;
@@ -10,13 +13,14 @@
 	font-weight: bold;
     justify-content: center;
 	text-decoration: none;
+    @include border;
 
     &:hover {
-        border: 0.125rem solid transparent;
+        @include border;
     }
 
     &:focus-visible {
         box-shadow: 0 0 0 4px #5e72e3;
-        border-color: white;
+        @include border;
     }
 }

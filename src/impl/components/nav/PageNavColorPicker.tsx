@@ -1,49 +1,60 @@
 import { solid } from '@fortawesome/fontawesome-svg-core/import.macro';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import styles from 'impl/styles/nav/colorPicker.module.scss';
+import lazyWithPreload from 'impl/utils/lazyWithPreload.ts';
 import * as React from 'react';
-import NavDropdown from 'react-bootstrap/esm/NavDropdown';
+import { Card } from 'react-bootstrap';
 import Spinner from 'react-bootstrap/Spinner';
-
-import styles from '../../styles/nav/colorPicker.module.scss';
-import lazyWithPreload from '../../utils/lazyWithPreload.ts';
 
 const PageNavColorPickerMenu = lazyWithPreload(() =>
 	import('./PageNavColorPickerMenu'),
 );
 
 export default function PageNavColorPicker(): React.JSX.Element {
+	const [isShown, setIsShown] = React.useState<boolean>(false);
+
 	const onMouseEnter = () => {
 		PageNavColorPickerMenu.preload();
 	};
 
+	const onClick = () => {
+		setIsShown(!isShown);
+	};
+
 	return (
-		<NavDropdown
-			aria-label="Color picker"
-			as="button"
-			align="end"
-			className={styles.icon}
-			data-testid="color-icon"
-			renderMenuOnMount={false}
-			title={
+		<>
+			<button
+				aria-label="Color picker"
+				data-testid="color-icon"
+				className={styles.picker}
+				onClick={onClick}
+				onMouseEnter={onMouseEnter}>
 				<FontAwesomeIcon
 					icon={solid('palette')}
 					bounce={true}
 				/>
-			}
-			onMouseEnter={onMouseEnter}>
-			<React.Suspense
-				fallback={
-					<div
-						className={styles.fallback}
-						data-testid="color-suspense">
-						<Spinner
-							animation="border"
-							variant="secondary"
-						/>
-					</div>
-				}>
-				<PageNavColorPickerMenu />
-			</React.Suspense>
-		</NavDropdown>
+				<FontAwesomeIcon
+					icon={solid('chevron-down')}
+					size="2xs"
+				/>
+			</button>
+			{isShown && (
+				<Card
+					className={styles.eek}
+					data-testid="color-suspense">
+					<React.Suspense
+						fallback={
+							<Spinner
+								className={styles.fallback}
+								data-testid="color-suspense"
+								animation="border"
+								variant="secondary"
+							/>
+						}>
+						<PageNavColorPickerMenu />
+					</React.Suspense>
+				</Card>
+			)}
+		</>
 	);
 }

@@ -6,9 +6,18 @@
 	width: 177px;
 }
 
-.icon {
-	padding: 0;
-	border: none;
+.eek {
+	position: absolute;
+	top: 100%;
+	left: auto;
+	right: 0;
+}
+
+.picker {
+	align-items: center;
 	background: none;
+	border: none;
 	color: inherit;
+	column-gap: 4px;
+	display: flex;
 }

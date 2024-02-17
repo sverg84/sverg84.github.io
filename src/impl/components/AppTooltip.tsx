@@ -6,7 +6,7 @@ import { useInView } from 'react-intersection-observer';
 import styles from '../styles/tooltip.module.scss';
 
 type Props = Readonly<{
-	content: string;
+	content: React.ReactNode;
 	tooltip: string;
 }>;
 

@@ -1,12 +1,11 @@
 import classNames from 'classnames';
+import MyName from 'impl/consts/MyName';
+import useColorStyle from 'impl/hooks/useColorStyle';
+import styles from 'impl/styles/body/about/text.module.scss';
 import moment from 'moment';
 import * as React from 'react';
 import Card from 'react-bootstrap/esm/Card';
 import { Link } from 'react-router-dom';
-
-import MyName from '../../../consts/MyName';
-import useColorStyle from '../../../hooks/useColorStyle';
-import styles from '../../../styles/body/about/text.module.scss';
 
 const BIRTHDATE: Date = new Date('1998-05-06T10:47:00.000-06:00'); // 6 May 1998 11:47 A.M. US Central Time
 

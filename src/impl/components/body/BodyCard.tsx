@@ -1,12 +1,13 @@
+import useColorStyle from 'impl/hooks/useColorStyle';
+import styles from 'impl/styles/body/experience/card.module.scss';
 import * as React from 'react';
 import Card from 'react-bootstrap/Card';
 
-import useColorStyle from '../../hooks/useColorStyle';
-import styles from '../../styles/body/experience/card.module.scss';
+import BodyCardWrapper from './BodyCardWrapper';
 
 type Props = Readonly<{
 	children: React.JSX.Element;
-	id?: string;
+	id: string;
 	title: string;
 }>;
 
@@ -18,15 +19,16 @@ export default function BodyCard({
 	const color = useColorStyle();
 
 	return (
-		<Card id={id}>
+		<BodyCardWrapper id={id}>
 			<Card.Header as="header">
 				<h2
 					className={styles.header}
-					style={color}>
+					style={color}
+					tabIndex={0}>
 					{title}
 				</h2>
 			</Card.Header>
 			<Card.Body as="section">{children}</Card.Body>
-		</Card>
+		</BodyCardWrapper>
 	);
 }

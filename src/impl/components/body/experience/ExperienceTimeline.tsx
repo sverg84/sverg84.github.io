@@ -77,7 +77,7 @@ const items: ReadonlyArray<TimelineItemData> = [
 export default function ExperienceTimeline(): React.JSX.Element {
 	const color = useBackgroundColorStyle();
 	return (
-		<div className={styles.timeline}>
+		<ul className={styles.timeline}>
 			<div
 				className={styles.bar}
 				style={color}
@@ -89,6 +89,6 @@ export default function ExperienceTimeline(): React.JSX.Element {
 					key={item.id}
 				/>
 			))}
-		</div>
+		</ul>
 	);
 }

@@ -1,7 +1,23 @@
+@mixin eekle {
+    @media (max-width: 992px) {
+        @content;
+    }
+}
+
 .brand {
     color: inherit;
-    font-size: 4vmin;
-    text-decoration: none;
+
+    &:hover {
+        color: inherit;
+    }
+
+    &:focus {
+        color: inherit;
+    }
+
+    &:focus-visible {
+        color: inherit;
+    }
 }
 
 .navbar {
@@ -19,4 +35,41 @@
     column-gap: 2rem;
     display: inline-flex;
     justify-content: flex-end;
+}
+
+.links {
+    display: inline-flex;
+    list-style: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.nav {
+    justify-content: end;
+    flex-grow: 1;
+}
+
+.link {
+    display: inline;
+}
+
+.toggle {
+    color: inherit;
+    border-color: inherit;
+}
+
+@media (max-width: 992px) {
+    .offcanvas {
+        display: flex;
+        flex-direction: column;
+        row-gap: 4px;
+        width: 100%;
+    }
+
+    .nav {
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 100%;
+    }
 }

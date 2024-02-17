@@ -1,2 +1,6 @@
 import * as React from 'react';
-export default function PageNavLatestPushTimestamp(): React.JSX.Element | null;
+type Props = Readonly<{
+    lastUpdatedTime: Date;
+}>;
+export default function PageNavLatestPushTimestamp({ lastUpdatedTime, }: Props): React.JSX.Element;
+export {};

@@ -28,7 +28,11 @@ export default function ExperienceTimelineItem({
 	});
 
 	const tag = (
-		<span className={styles.tag} style={background}>{data.tag}</span>
+		<span
+			className={styles.tag}
+			style={background}>
+			{data.tag}
+		</span>
 	);
 	const time = <time>{data.timeframe}</time>;
 
@@ -45,7 +49,9 @@ export default function ExperienceTimelineItem({
 	);
 
 	return (
-		<div className={styles.item}>
+		<li
+			className={styles.item}
+			tabIndex={0}>
 			<div
 				className={classNames(styles.content, inView ? styles.in : 'opacity-0')}
 				data-testid={`exp-item-${data.id}`}
@@ -67,6 +73,6 @@ export default function ExperienceTimelineItem({
 				className={styles.circle}
 				style={border}
 			/>
-		</div>
+		</li>
 	);
 }

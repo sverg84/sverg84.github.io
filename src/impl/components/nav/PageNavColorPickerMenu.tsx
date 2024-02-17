@@ -1,9 +1,8 @@
+import ColorContext from 'impl/contexts/ColorContext';
+import styles from 'impl/styles/nav/colorPickerMenu.module.scss';
 import * as React from 'react';
 import NavDropdown from 'react-bootstrap/esm/NavDropdown';
 import { HexColorInput, HexColorPicker } from 'react-colorful';
-
-import ColorContext from '../../contexts/ColorContext';
-import styles from '../../styles/nav/colorPickerMenu.module.scss';
 
 export default function PageNavColorPickerMenu(): React.JSX.Element {
 	const [color, setColor] = React.useContext(ColorContext);
@@ -19,6 +18,7 @@ export default function PageNavColorPickerMenu(): React.JSX.Element {
 				<HexColorPicker
 					aria-label="Color picker item with color scale"
 					color={color}
+					id={styles.colors}
 					onChange={setColor}
 				/>
 				<HexColorInput
