@@ -26,10 +26,10 @@ export declare function useTooltip({ initialOpen, placement, open: controlledOpe
         floating: HTMLElement | null;
     } & import("@floating-ui/react").ExtendedElements<import("@floating-ui/react").ReferenceType>;
     context: {
-        x: number;
-        y: number;
         placement: Placement;
         strategy: import("@floating-ui/utils").Strategy;
+        x: number;
+        y: number;
         middlewareData: import("@floating-ui/core").MiddlewareData;
         isPositioned: boolean;
         update: () => void;

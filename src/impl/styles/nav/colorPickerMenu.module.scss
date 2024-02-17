@@ -1,5 +1,17 @@
+.card {
+	padding: 8px;
+	height: 290.8px;
+	width: 217.6px;
+}
+
+.fallback {
+	align-items: center;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
 .header {
-	color: black;
 	font-size: 16px;
 	font-style: italic;
 	font-weight: bold;
@@ -10,11 +22,4 @@
 	display: flex;
 	flex-direction: column;
 	row-gap: 16px;
-	margin: 8px;
-}
-
-.dropdown {
-	align-items: center;
-	column-gap: 8px;
-	display: inline-flex;
 }

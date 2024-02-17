@@ -68,6 +68,7 @@ export default function PageNavBar(): React.JSX.Element {
 						{JobSeekerNavItems.map(({label, to}) => (
 							<LinkContainer
 								className={navStyles.link}
+								key={to}
 								style={{color: 'inherit'}}
 								to={{hash: to}}>
 								<Nav.Link>{label}</Nav.Link>

@@ -1,20 +1,20 @@
 import type { Placement } from '@floating-ui/react';
 import {
-    arrow,
-    autoUpdate,
-    flip,
-    FloatingArrow,
-    FloatingPortal,
-    offset,
-    shift,
-    useDismiss,
-    useFloating,
-    useFocus,
-    useHover,
-    useInteractions,
-    useMergeRefs,
-    useRole,
-    useTransitionStyles,
+	arrow,
+	autoUpdate,
+	flip,
+	FloatingArrow,
+	FloatingPortal,
+	offset,
+	shift,
+	useDismiss,
+	useFloating,
+	useFocus,
+	useHover,
+	useInteractions,
+	useMergeRefs,
+	useRole,
+	useTransitionStyles,
 } from '@floating-ui/react';
 import classNames from 'classnames';
 import * as React from 'react';
@@ -22,10 +22,10 @@ import * as React from 'react';
 import styles from './tooltip.module.scss';
 
 /*
-*   Derived (mostly) from 
-*   [Floating UI example](https://codesandbox.io/p/sandbox/xenodochial-grass-js3bo9?file=%2Fsrc%2FTooltip.tsx%3A38%2C10)
-*   with the inclusion of <FloatingArrow /> and useTransitionStyles()
-*/
+ *   Derived (mostly) from
+ *   [Floating UI example](https://codesandbox.io/p/sandbox/xenodochial-grass-js3bo9?file=%2Fsrc%2FTooltip.tsx%3A38%2C10)
+ *   with the inclusion of <FloatingArrow /> and useTransitionStyles()
+ */
 
 interface TooltipOptions {
 	initialOpen?: boolean;
@@ -50,6 +50,7 @@ export function useTooltip({
 		placement,
 		open,
 		onOpenChange: setOpen,
+		strategy: 'fixed',
 		whileElementsMounted: autoUpdate,
 		middleware: [
 			offset(5),
@@ -85,7 +86,7 @@ export function useTooltip({
 			...interactions,
 			...data,
 		}),
-		[open, setOpen, interactions, data],
+		[arrowRef, open, setOpen, interactions, data],
 	);
 }
 
@@ -177,11 +178,11 @@ export const TooltipContent = React.forwardRef<
 				}}
 				{...context.getFloatingProps(other)}>
 				<FloatingArrow
-                    className={styles.arrow}
+					className={styles.arrow}
 					context={context.context}
-                    ref={context.arrowRef}
+					ref={context.arrowRef}
 				/>
-                {children}
+				{children}
 			</div>
 		</FloatingPortal>
 	);

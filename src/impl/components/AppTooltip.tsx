@@ -1,11 +1,7 @@
 import type { Placement } from '@floating-ui/react';
-import {
-	Tooltip,
-	TooltipContent,
-	TooltipTrigger,
-} from 'impl/lib/Tooltip/Tooltip';
 import * as React from 'react';
 
+import { Tooltip, TooltipContent, TooltipTrigger } from '../lib/Tooltip/Tooltip';
 import styles from '../styles/tooltip.module.scss';
 
 type Props = Readonly<{

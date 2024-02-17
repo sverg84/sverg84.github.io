@@ -1,19 +1,16 @@
 import ColorContext from 'impl/contexts/ColorContext';
+import { PopoverHeading } from 'impl/lib/Popover/Popover';
 import styles from 'impl/styles/nav/colorPickerMenu.module.scss';
 import * as React from 'react';
-import NavDropdown from 'react-bootstrap/esm/NavDropdown';
+import Card from 'react-bootstrap/esm/Card';
 import { HexColorInput, HexColorPicker } from 'react-colorful';
 
 export default function PageNavColorPickerMenu(): React.JSX.Element {
 	const [color, setColor] = React.useContext(ColorContext);
 
 	return (
-		<>
-			<NavDropdown.Header
-				as="header"
-				className={styles.header}>
-				Color Picker
-			</NavDropdown.Header>
+		<Card className={styles.card}>
+			<PopoverHeading className={styles.header}>Color Picker</PopoverHeading>
 			<section className={styles.picker}>
 				<HexColorPicker
 					aria-label="Color picker item with color scale"
@@ -28,6 +25,6 @@ export default function PageNavColorPickerMenu(): React.JSX.Element {
 					onChange={setColor}
 				/>
 			</section>
-		</>
+		</Card>
 	);
 }

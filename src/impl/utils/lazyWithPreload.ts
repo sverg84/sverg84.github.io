@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-interface PreloadedExoticComponent<T extends React.ComponentType<any>>
+export interface PreloadedExoticComponent<T extends React.ComponentType<any>>
 	extends React.LazyExoticComponent<T> {
 	preload: () => {};
 }
