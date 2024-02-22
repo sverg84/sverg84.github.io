@@ -12,6 +12,7 @@ import {
 
 import AppCore from './impl/components/AppCore';
 import styles from './impl/styles/index.module.scss';
+import { coreLoader } from 'impl/utils/coreLoader';
 
 const rootElement: HTMLElement | null = document.getElementById('root');
 
@@ -25,7 +26,8 @@ const router = createBrowserRouter(
 	createRoutesFromElements([
 		<Route
 			path="/"
-			element={<AppCore />}>
+			element={<AppCore />}
+			loader={coreLoader}>
 			<Route
 				index={true}
 				lazy={async () => await import('./impl/components/AppJobSeeker')}
