@@ -1,75 +1,75 @@
 @mixin eekle {
-    @media (max-width: 992px) {
-        @content;
-    }
+  @media (max-width: 992px) {
+    @content;
+  }
 }
 
 .brand {
+  color: inherit;
+
+  &:hover {
     color: inherit;
+  }
 
-    &:hover {
-        color: inherit;
-    }
+  &:focus {
+    color: inherit;
+  }
 
-    &:focus {
-        color: inherit;
-    }
-
-    &:focus-visible {
-        color: inherit;
-    }
+  &:focus-visible {
+    color: inherit;
+  }
 }
 
 .navbar {
-    align-items: center;
-    display: inline-flex;
+  align-items: center;
+  display: inline-flex;
 }
 
 .pushTime {
-    font-size: 1.75vmin;
-    text-align: center;
+  font-size: 1.75vmin;
+  text-align: center;
 }
 
 .rightContent {
-    align-items: center;
-    column-gap: 2rem;
-    display: inline-flex;
-    justify-content: flex-end;
+  align-items: center;
+  column-gap: 2rem;
+  display: inline-flex;
+  justify-content: flex-end;
 }
 
 .links {
-    display: inline-flex;
-    list-style: none;
-    width: 100%;
-    margin: 0;
-    padding: 0;
+  display: inline-flex;
+  list-style: none;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .nav {
-    justify-content: end;
-    flex-grow: 1;
+  justify-content: end;
+  flex-grow: 1;
 }
 
 .link {
-    display: inline;
+  display: inline;
 }
 
 .toggle {
-    color: inherit;
-    border-color: inherit;
+  color: inherit;
+  border-color: inherit;
 }
 
 @media (max-width: 992px) {
-    .offcanvas {
-        display: flex;
-        flex-direction: column;
-        row-gap: 4px;
-        width: 100%;
-    }
+  .offcanvas {
+    display: flex;
+    flex-direction: column;
+    row-gap: 4px;
+    width: 100%;
+  }
 
-    .nav {
-        flex-direction: row;
-        justify-content: space-evenly;
-        width: 100%;
-    }
+  .nav {
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+  }
 }

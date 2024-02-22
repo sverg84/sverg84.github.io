@@ -1,9 +1,9 @@
-import * as React from 'react';
+import * as React from "react";
 
-import ColorContext from '../contexts/ColorContext';
+import ColorContext from "../contexts/ColorContext";
 
 export default function useColorStyle(): React.CSSProperties {
-    const [color] = React.useContext(ColorContext);
+  const [color] = React.useContext(ColorContext);
 
-    return {color};
+  return { color };
 }

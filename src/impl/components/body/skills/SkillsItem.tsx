@@ -1,28 +1,29 @@
-import * as React from 'react';
-import AccordionCollapse from 'react-bootstrap/esm/AccordionCollapse';
-import AccordionItem from 'react-bootstrap/esm/AccordionItem';
-import Card from 'react-bootstrap/esm/Card';
+import * as React from "react";
+import AccordionCollapse from "react-bootstrap/esm/AccordionCollapse";
+import AccordionItem from "react-bootstrap/esm/AccordionItem";
+import Card from "react-bootstrap/esm/Card";
 
-import SkillsItemToggle from './SkillsItemToggle';
+import SkillsItemToggle from "./SkillsItemToggle";
 
 type Props = Readonly<{
-	children: React.ReactNode;
-	eventKey: string;
+  children: React.ReactNode;
+  eventKey: string;
 }>;
 
 export default function SkillsItem({
-	children,
-	eventKey,
+  children,
+  eventKey,
 }: Props): React.JSX.Element {
-	return (
-		<AccordionItem eventKey={eventKey}>
-			<SkillsItemToggle eventKey={eventKey} />
-			<AccordionCollapse
-				eventKey={eventKey}
-				mountOnEnter={true}
-				unmountOnExit={true}>
-				<Card.Body>{children}</Card.Body>
-			</AccordionCollapse>
-		</AccordionItem>
-	);
+  return (
+    <AccordionItem eventKey={eventKey}>
+      <SkillsItemToggle eventKey={eventKey} />
+      <AccordionCollapse
+        eventKey={eventKey}
+        mountOnEnter={true}
+        unmountOnExit={true}
+      >
+        <Card.Body>{children}</Card.Body>
+      </AccordionCollapse>
+    </AccordionItem>
+  );
 }

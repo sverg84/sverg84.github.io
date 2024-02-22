@@ -1,13 +1,13 @@
-import * as React from 'react';
+import * as React from "react";
 
-import ColorContext from '../contexts/ColorContext';
-import useTextColorForCustomBackground from './useTextColorForCustomBackground';
+import ColorContext from "../contexts/ColorContext";
+import useTextColorForCustomBackground from "./useTextColorForCustomBackground";
 
 export default function useBackgroundColorStyle(
-	alpha: string = '',
+  alpha: string = "",
 ): React.CSSProperties {
-	const [color] = React.useContext(ColorContext);
-	const textColor = useTextColorForCustomBackground();
+  const [color] = React.useContext(ColorContext);
+  const textColor = useTextColorForCustomBackground();
 
-	return {backgroundColor: `${color}${alpha}`, color: textColor};
+  return { backgroundColor: `${color}${alpha}`, color: textColor };
 }

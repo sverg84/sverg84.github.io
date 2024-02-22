@@ -1,26 +1,26 @@
-@use './backgroundCommon.module.scss';
+@use "./backgroundCommon.module.scss";
 
 .bg {
-    animation: slide 3s ease-in-out infinite alternate;
-    @include backgroundCommon.bg-common(0.5);
+  animation: slide 3s ease-in-out infinite alternate;
+  @include backgroundCommon.bg-common(0.5);
 }
 
 .bg2 {
-    @extend .bg;
-    animation-direction: alternate-reverse;
-    animation-duration: 4s;
+  @extend .bg;
+  animation-direction: alternate-reverse;
+  animation-duration: 4s;
 }
-  
+
 .bg3 {
-    @extend .bg;
-    animation-duration: 5s;
+  @extend .bg;
+  animation-duration: 5s;
 }
 
 @keyframes slide {
-    0% {
-        transform: translateX(-25%);
-    }
-    100% {
-        transform: translateX(25%);
-    }
+  0% {
+    transform: translateX(-25%);
+  }
+  100% {
+    transform: translateX(25%);
+  }
 }

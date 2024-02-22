@@ -1,6 +1,6 @@
-import { Placement } from '@floating-ui/react';
-import type { PreloadedExoticComponent } from 'impl/utils/lazyWithPreload';
-import * as React from 'react';
+import { Placement } from "@floating-ui/react";
+import type { PreloadedExoticComponent } from "impl/utils/lazyWithPreload";
+import * as React from "react";
 interface PopoverOptions {
     initialOpen?: boolean;
     placement?: Placement;

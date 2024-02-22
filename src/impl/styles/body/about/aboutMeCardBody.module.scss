@@ -1,31 +1,31 @@
 $dimension: 300px;
 
 @mixin dimensions($max: false) {
-	#{if($max, max-, null)}height: $dimension;
-	#{if($max, max-, null)}width: $dimension;
+  #{if($max, max-, null)}height: $dimension;
+  #{if($max, max-, null)}width: $dimension;
 }
 
 .body {
-	row-gap: 24px;
+  row-gap: 24px;
 }
 
 .base {
-	align-self: center;
-	justify-self: center;
+  align-self: center;
+  justify-self: center;
 }
 
 .glimmer {
-	@extend .base;
-	@include dimensions;
+  @extend .base;
+  @include dimensions;
 
-	border-radius: var(--bs-card-inner-border-radius);
+  border-radius: var(--bs-card-inner-border-radius);
 }
 
 .image {
-	@extend .base;
-	@include dimensions($max: true);
+  @extend .base;
+  @include dimensions($max: true);
 }
 
 .imageColumn {
-	display: grid;
+  display: grid;
 }

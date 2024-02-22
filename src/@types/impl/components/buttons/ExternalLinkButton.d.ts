@@ -1,5 +1,5 @@
-import { IconLookup } from '@fortawesome/fontawesome-svg-core';
-import * as React from 'react';
+import { IconLookup } from "@fortawesome/fontawesome-svg-core";
+import * as React from "react";
 type Props = Readonly<{
     className?: string;
     href: string;

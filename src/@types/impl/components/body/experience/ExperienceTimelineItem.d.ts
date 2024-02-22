@@ -1,5 +1,5 @@
-import * as React from 'react';
-import type { TimelineItemData } from './ExperienceTimeline';
+import * as React from "react";
+import type { TimelineItemData } from "./ExperienceTimeline";
 type Props = Readonly<{
     data: TimelineItemData;
     isOdd: boolean;

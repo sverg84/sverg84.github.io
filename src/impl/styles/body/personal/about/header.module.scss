@@ -1,32 +1,36 @@
 .header {
-    column-gap: 2px;
-    display: inline-flex;
-    justify-content: center;
+  column-gap: 2px;
+  display: inline-flex;
+  justify-content: center;
 
-    span {
-        animation: wavy 1.5s ease-in-out infinite;
-        display: inline-block;
-        font-weight: bold;
-        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  span {
+    animation: wavy 1.5s ease-in-out infinite;
+    display: inline-block;
+    font-weight: bold;
+    text-shadow:
+      -1px 0 black,
+      0 1px black,
+      1px 0 black,
+      0 -1px black;
 
-        $delay: 0.0s;
-        @for $i from 1 through 10 {
-            &:nth-last-of-type(#{$i}) {
-                animation-delay: $delay;
-                $delay: $delay - 0.1s;
-            }
-        }
+    $delay: 0s;
+    @for $i from 1 through 10 {
+      &:nth-last-of-type(#{$i}) {
+        animation-delay: $delay;
+        $delay: $delay - 0.1s;
+      }
     }
+  }
 }
 
 @keyframes wavy {
-    0% {
-      transform: translateY(0.3em);
-    }
-    60% {
-      transform: translateY(-0.3em);
-    }
-    100% {
-      transform: translateY(0.3em);
-    }
+  0% {
+    transform: translateY(0.3em);
   }
+  60% {
+    transform: translateY(-0.3em);
+  }
+  100% {
+    transform: translateY(0.3em);
+  }
+}

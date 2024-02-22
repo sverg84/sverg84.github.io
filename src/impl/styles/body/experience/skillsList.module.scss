@@ -1,22 +1,22 @@
 .section {
-    align-self: center;
-    display: inline-flex;
-    column-gap: 4px;
+  align-self: center;
+  display: inline-flex;
+  column-gap: 4px;
 }
 
 .label {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .list {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
 }
 
 .list li {
-    display: inline;
+  display: inline;
 
-    &:nth-last-child(n+2)::after {
-        content: ", ";
-    }
+  &:nth-last-child(n + 2)::after {
+    content: ", ";
+  }
 }

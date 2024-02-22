@@ -1,5 +1,5 @@
-import * as React from 'react';
-import type { Props as ImageProps } from './AboutMeCardImage';
+import * as React from "react";
+import type { Props as ImageProps } from "./AboutMeCardImage";
 type Props = Readonly<{
     children: React.JSX.Element;
 }> & ImageProps;

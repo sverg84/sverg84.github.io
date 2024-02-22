@@ -3,4 +3,4 @@ export type Props = Readonly<{
     className: string;
     numStars: number;
 }>;
-export default function Stars({ className, numStars }: Props): React.JSX.Element;
+export default function Stars({ className, numStars, }: Props): React.JSX.Element;

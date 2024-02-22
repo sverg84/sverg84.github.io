@@ -1,9 +1,9 @@
 @mixin bg-common($opacity) {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: -50%;
-    right: -50%;
-    opacity: $opacity;
-    z-index: -1;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: -50%;
+  right: -50%;
+  opacity: $opacity;
+  z-index: -1;
 }

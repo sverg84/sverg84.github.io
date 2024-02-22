@@ -1,25 +1,25 @@
 .card {
-	padding: 8px;
-	height: 290.8px;
-	width: 217.6px;
+  padding: 8px;
+  height: 290.8px;
+  width: 217.6px;
 }
 
 .fallback {
-	align-items: center;
-    display: flex;
-    justify-content: center;
-    overflow: hidden;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
 }
 
 .header {
-	font-size: 16px;
-	font-style: italic;
-	font-weight: bold;
-	text-align: center;
+  font-size: 16px;
+  font-style: italic;
+  font-weight: bold;
+  text-align: center;
 }
 
 .picker {
-	display: flex;
-	flex-direction: column;
-	row-gap: 16px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
 }

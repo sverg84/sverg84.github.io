@@ -1,38 +1,38 @@
 $colors: (
-    "facebook": #1877f2,
-    "github": #171515,
-    "linkedin": #0077b5,
-    "steam": #145c8f,
-    "discord": #7289da,
+  "facebook": #1877f2,
+  "github": #171515,
+  "linkedin": #0077b5,
+  "steam": #145c8f,
+  "discord": #7289da,
 );
 
 @mixin a11y($hex) {
-    background-color: $hex;
-    color: white;
+  background-color: $hex;
+  color: white;
 }
 
 @mixin mixin($color, $hex) {
-    .#{$color} {
-        border-color: $hex;
-        color: $hex;
-        align-items: center;
-        display: inline-flex;
-        height: 48px;
-        justify-content: center;
-        width: 56px;
+  .#{$color} {
+    border-color: $hex;
+    color: $hex;
+    align-items: center;
+    display: inline-flex;
+    height: 48px;
+    justify-content: center;
+    width: 56px;
 
-        &:hover {
-            @include a11y($hex);
-        }
-
-        &:focus-visible {
-            @include a11y($hex);
-        box-shadow: 0px 0px 0px 4px $hex;
-            border-color: white;
-        }
+    &:hover {
+      @include a11y($hex);
     }
+
+    &:focus-visible {
+      @include a11y($hex);
+      box-shadow: 0px 0px 0px 4px $hex;
+      border-color: white;
+    }
+  }
 }
 
 @each $color, $hex in $colors {
-    @include mixin($color, #{$hex});
+  @include mixin($color, #{$hex});
 }

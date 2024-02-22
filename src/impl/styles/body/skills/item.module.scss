@@ -1,30 +1,30 @@
 .button {
-    display: inline-flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
-    padding: 0.5rem 1rem;
-    width: 100%;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 0.5rem 1rem;
+  width: 100%;
 }
 
 .collapse {
-    @extend .button;
-    background: none;
-    border: none;
-    color: black;
+  @extend .button;
+  background: none;
+  border: none;
+  color: black;
 }
 
 .expand {
-    @extend .button;
-    border-width: 0;
+  @extend .button;
+  border-width: 0;
 }
 
 .firstExpand {
-    @extend .expand;
-    border-top-left-radius: var(--bs-accordion-inner-border-radius);
-    border-top-right-radius: var(--bs-accordion-inner-border-radius);
+  @extend .expand;
+  border-top-left-radius: var(--bs-accordion-inner-border-radius);
+  border-top-right-radius: var(--bs-accordion-inner-border-radius);
 }
 
 .header {
-    padding: 0;
+  padding: 0;
 }

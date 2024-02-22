@@ -1,6 +1,8 @@
-import * as React from 'react';
+import * as React from "react";
 type Props = Readonly<{
-    src: string;
+  src: string;
 }>;
-export default function PersonalAboutMeCarouselItem({ src, }: Props): React.JSX.Element;
+export default function PersonalAboutMeCarouselItem({
+  src,
+}: Props): React.JSX.Element;
 export {};
