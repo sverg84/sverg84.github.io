@@ -26,16 +26,11 @@ export async function coreLoader(): Promise<CoreLoaderData> {
     import("impl/components/nav/PageNavLatestPushTimestamp"),
   ]);
 
-  const { sunrise, sunset } = weatherData;
-  const currentTime = new Date().getTime();
-
-  const className =
-    currentTime < sunrise * 1000 || currentTime >= sunset * 1000
-      ? styles.night
-      : styles.day;
-
   return {
-    weather: { ...weatherData, className },
+    weather: {
+      ...weatherData,
+      className: weatherData.night ? styles.night : styles.day,
+    },
     lastUpdatedTime: new Date(updateTime),
     PageNavLatestPushTimestamp,
   };
