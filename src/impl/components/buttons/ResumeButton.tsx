@@ -14,7 +14,7 @@ export default function ResumeButton(): React.JSX.Element {
   return (
     <Button
       className={styles.resume}
-      href="/sverg_resume.pdf"
+      href="/sverg_resume_2024.pdf"
       style={style}
       target="_blank"
       variant="outline-light"
